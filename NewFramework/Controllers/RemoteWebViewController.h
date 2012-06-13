@@ -14,4 +14,7 @@
 
 @property (nonatomic, retain) UIWebView *webView;
 
++(NSString *) bootString;
+-(NSString *) dumpHTML;
+
 @end

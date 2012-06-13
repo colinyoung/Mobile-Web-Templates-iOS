@@ -1,4 +1,5 @@
 #import "RemoteWebViewController.h"
+#import "GRMustache.h"
 
 @implementation RemoteWebViewController
 
@@ -36,7 +37,12 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.webView stringByEvaluatingJavaScriptFromString:@"document.write('hello');"];
+    
+    [self dumpHTML];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:[[self class] bootString]];
+    
+    [self dumpHTML];
 }
 
 - (void)viewDidUnload
@@ -50,6 +56,42 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - JS methods
++(NSString *) bootString {
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    NSString *js = @""
+    "document.write('<html><head></head><body><p>Hello world.</p></body></html>');"
+    "var head = document.getElementsByTagName('head').item(0);"
+    "var newScript = document.createElement('script');"
+    "newScript.type = 'text/javascript';"
+    "newScript.src = '{{baseURL}}/boot.js';"
+    "head.appendChild(newScript);";
+    
+    NSString *script = [GRMustacheTemplate renderObject:[NSDictionary dictionaryWithObject:[baseURL path] forKey:@"baseURL"]
+                                 fromString:js
+                                                  error:NULL];
+    
+    NSLog(@"script: %@", script);
+    
+    return script;
+}
+
+-(NSString *) dumpHTML {
+    NSMutableString *template = [NSMutableString stringWithString:@"<!doctype html>\n<html>\n"];
+    [template appendString:@"<head>\n"];
+    [template appendFormat:@"%@\n", [self.webView stringByEvaluatingJavaScriptFromString:@"document.head.innerHTML"]];
+    [template appendString:@"</head>\n"];
+    
+    [template appendString:@"<body>\n"];
+    [template appendFormat:@"%@\n", [self.webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"]];
+    [template appendString:@"</body>"];
+    
+    NSLog(@"HTML: \n%@", template);
+    
+    return template;
 }
 
 @end
