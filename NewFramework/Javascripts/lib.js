@@ -9,7 +9,7 @@ MobileFramework.prototype = {
   interceptAllLinks: function() {
     var _this = this;
     
-    var s = '*[href*="ios-callback"]';
+    var s = '*[href*="' + this.prefix + '"]';
     $(s).each(function(i, el) {
       var href = $(el).attr('href');
       $(el).attr('href', 'javascript:;'); // unset and replace w/ event listener
