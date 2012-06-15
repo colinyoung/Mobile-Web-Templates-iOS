@@ -38,11 +38,11 @@
 {
     [super viewDidAppear:animated];
     
-    [self dumpHTML];
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    [self.webView loadHTMLString:[[self class] bootString] baseURL:baseURL];
     
-    [self.webView stringByEvaluatingJavaScriptFromString:[[self class] bootString]];
-    
-    [self dumpHTML];
+    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(dumpHTML) userInfo:nil repeats:NO];
 }
 
 - (void)viewDidUnload
@@ -60,23 +60,15 @@
 
 #pragma mark - JS methods
 +(NSString *) bootString {
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString *js = @""
-    "document.write('<html><head></head><body><p>Hello world.</p></body></html>');"
-    "var head = document.getElementsByTagName('head').item(0);"
-    "var newScript = document.createElement('script');"
-    "newScript.type = 'text/javascript';"
-    "newScript.src = '{{baseURL}}/boot.js';"
-    "head.appendChild(newScript);";
-    
-    NSString *script = [GRMustacheTemplate renderObject:[NSDictionary dictionaryWithObject:[baseURL path] forKey:@"baseURL"]
-                                 fromString:js
-                                                  error:NULL];
-    
-    NSLog(@"script: %@", script);
-    
-    return script;
+    return @""
+    "<html>"
+        "<head>"
+            "<script src=\"boot.js\"></script>"
+        "</head>"
+        "<body>"
+            "<p>This is not printed by javascript.</p>"
+        "</body>"
+    "</html>";
 }
 
 -(NSString *) dumpHTML {
