@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RemoteWebViewController : UIViewController {
+@interface RemoteWebViewController : UIViewController <UIWebViewDelegate> {
     UIWebView *_webView;
 }
 

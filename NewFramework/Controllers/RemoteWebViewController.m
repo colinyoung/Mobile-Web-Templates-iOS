@@ -10,6 +10,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Loading...";
     }
     return self;
 }
@@ -27,10 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Create and display webview
     CGRect frame = self.view.frame;
-    frame = CGRectMake(0, -20, frame.size.width, frame.size.height);
-    _webView = [[UIWebView alloc] initWithFrame:frame];
-    [self.view addSubview:_webView];
+    frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    self.webView = [[UIWebView alloc] initWithFrame:frame];
+    self.webView.delegate = self;
+    [self.view addSubview:self.webView];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -63,10 +66,13 @@
     return @""
     "<html>"
         "<head>"
+            "<script src=\"jquery-1.7.2.min.js\"></script>"
+            //"<script src=\"jquery.mobile-1.1.0.min.js\"></script>"
+            "<script src=\"underscore-min.js\"></script>"
+            "<script src=\"lib.js\"></script>"
             "<script src=\"boot.js\"></script>"
         "</head>"
         "<body>"
-            "<p>This is not printed by javascript.</p>"
         "</body>"
     "</html>";
 }
@@ -84,6 +90,42 @@
     NSLog(@"HTML: \n%@", template);
     
     return template;
+}
+
+-(void)test {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:@"" delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
+    [av show];
+}
+
+#pragma mark - UIWebViewDelegate methods
+- (BOOL)webView:(UIWebView *)webView 
+shouldStartLoadWithRequest:(NSURLRequest *)request 
+ navigationType:(UIWebViewNavigationType)navigationType {
+    
+    NSLog(@"webView:shouldStartLoad:navType");
+    NSString *requestString = [[request URL] absoluteString];
+    NSLog(@"Loading %@", requestString);
+    // Intercept custom location change, URL begins with "js-call:"
+    if ([requestString hasPrefix:@"ios-callback:"]) {
+        
+        requestString = [requestString stringByReplacingOccurrencesOfString:@"ios-callback:" withString:@"ios-callback://"];
+        NSURL *fixedURL = [NSURL URLWithString:requestString];
+        
+        // Extract the selector name from the URL
+        NSString *function = [fixedURL host];
+        
+        // Call the given selector
+        NSLog(@"%@", function);
+        
+        [self performSelector:NSSelectorFromString(function)];
+        
+        // Cancel the location change
+        return NO;
+    }
+    
+    // Accept this location change
+    return YES;
+    
 }
 
 @end

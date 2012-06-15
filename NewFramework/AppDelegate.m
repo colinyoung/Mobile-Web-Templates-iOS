@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
 
 @implementation AppDelegate
 
@@ -16,18 +15,28 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
+@synthesize rootVC = _rootVC;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    RootViewController *rootVC = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    self.rootVC = [[RemoteWebViewController alloc] initWithNibName:nil bundle:nil];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    [self.window addSubview:navVC.view];    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.rootVC];
+    [self.window addSubview:navVC.view];
     
     [self.window makeKeyAndVisible];
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url 
+{   
+    NSLog(@"Opening URL: %@", url);
+    if (!url) return NO;
     
     return YES;
 }
