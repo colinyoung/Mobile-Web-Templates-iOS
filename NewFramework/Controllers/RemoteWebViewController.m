@@ -138,7 +138,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         message = [GRMustacheTemplate renderObject:options fromString:@"Message was: {{say}}" error:NULL];
     }
     
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:message delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [av show];
 }
 
@@ -147,7 +147,15 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 }
 
 - (void)showTableView:(NSDictionary *)options {
-    
+    [self.webView inject:@"<div class=\"tableview\">"
+        "<ul>"
+            "<li><p>Dr. Jekyll</p></li>"
+            "<li><p>Mr. Hyde</p></li>"     
+            "<li><p>The Pagemaster</p></li>"
+            "<li><p><a href=\"ios-callback:test?say=Maculay%20Culkin%20is%20scary\">Maculay Culkin</a></p></li>"
+            "<li><p>The Drippy Ceiling</p></li>"
+        "</ul>"
+     "</div>"];
 }
 
 @end

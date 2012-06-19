@@ -1,5 +1,31 @@
-.tableview .row, .list .row {
+.tableview li, .list li {
     border-bottom: 1px solid #ccc;
+    padding: 0; margin: 0;
+    display: block;
+}
+.tableview li:first-child {
+    border-top: 1px solid #ccc;
+}
+.tableview li p {
+    font-size: 16pt; /* Looks like default big tableview */
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
+.tableview li p a {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+}
+.tableview li p a:link, .tableview li p a:visited {
+    background: url('disclosure-indicator.png') no-repeat 100% 50%;
+}
+.tableview li p a:hover, .tableview li p a:active {
+    background-color: rgba(0,118,204,0.9);
+}
+.tableview ul {
+    margin: 0;
+    list-style: none; 
 }
 
 body {

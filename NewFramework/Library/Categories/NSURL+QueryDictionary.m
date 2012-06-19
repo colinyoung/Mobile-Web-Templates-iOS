@@ -9,7 +9,7 @@
     NSMutableDictionary *kv = [NSMutableDictionary dictionary];
     
     for (int i = 0; i < [parameters count]; i=i+2) {
-        [kv setObject:[parameters objectAtIndex:i+1] forKey:[parameters objectAtIndex:i]];
+        [kv setObject:[[parameters objectAtIndex:i+1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] forKey:[parameters objectAtIndex:i]];
     }
     
     return [NSDictionary dictionaryWithDictionary:kv];
