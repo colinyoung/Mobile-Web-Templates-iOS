@@ -25,16 +25,11 @@
 		3B6CABDA1590397D00CEF513 /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */; };
 		3B6CABDD159039FC00CEF513 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABDC159039FC00CEF513 /* Functions.m */; };
 		3B6CABDF15903A3800CEF513 /* Types.h in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABDE15903A3800CEF513 /* Types.h */; };
-		3B80CC7F158B90F30056252E /* boot.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC7E158B90F30056252E /* boot.js */; };
-		3B80CC81158B91260056252E /* boot.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC7E158B90F30056252E /* boot.js */; };
-		3B80CC8C158B98C00056252E /* jquery-1.7.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC8A158B98C00056252E /* jquery-1.7.2.min.js */; };
-		3B80CC8D158B98C00056252E /* underscore-min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC8B158B98C00056252E /* underscore-min.js */; };
-		3B80CC8E158B98CA0056252E /* underscore-min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC8B158B98C00056252E /* underscore-min.js */; };
-		3B80CC8F158B98CC0056252E /* jquery-1.7.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC8A158B98C00056252E /* jquery-1.7.2.min.js */; };
-		3B80CC91158B9AE60056252E /* lib.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC90158B9AE60056252E /* lib.js */; };
-		3B80CC92158BA3AC0056252E /* lib.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC90158B9AE60056252E /* lib.js */; };
-		3B80CC94158BB1350056252E /* jquery.mobile-1.1.0.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */; };
-		3B80CC95158BB1F20056252E /* jquery.mobile-1.1.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */; };
+		3B6CABE615903C1800CEF513 /* boot.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE115903C1800CEF513 /* boot.js */; };
+		3B6CABE715903C1800CEF513 /* jquery-1.7.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */; };
+		3B6CABE815903C1800CEF513 /* jquery.mobile-1.1.0.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE315903C1800CEF513 /* jquery.mobile-1.1.0.min.js */; };
+		3B6CABE915903C1800CEF513 /* lib.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE415903C1800CEF513 /* lib.js */; };
+		3B6CABEA15903C1800CEF513 /* underscore-min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE515903C1800CEF513 /* underscore-min.js */; };
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
 		3BCDBE8515880A7700EACAC7 /* RemoteWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDBE8415880A7700EACAC7 /* RemoteWebViewController.m */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
@@ -79,11 +74,11 @@
 		3B6CABDB1590399100CEF513 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		3B6CABDC159039FC00CEF513 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		3B6CABDE15903A3800CEF513 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
-		3B80CC7E158B90F30056252E /* boot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = boot.js; path = Javascripts/boot.js; sourceTree = "<group>"; };
-		3B80CC8A158B98C00056252E /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.7.2.min.js"; path = "Javascripts/jquery-1.7.2.min.js"; sourceTree = "<group>"; };
-		3B80CC8B158B98C00056252E /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "underscore-min.js"; path = "Javascripts/underscore-min.js"; sourceTree = "<group>"; };
-		3B80CC90158B9AE60056252E /* lib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = lib.js; path = Javascripts/lib.js; sourceTree = "<group>"; };
-		3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery.mobile-1.1.0.min.js"; path = "Javascripts/jquery.mobile-1.1.0.min.js"; sourceTree = "<group>"; };
+		3B6CABE115903C1800CEF513 /* boot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = boot.js; sourceTree = "<group>"; };
+		3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
+		3B6CABE315903C1800CEF513 /* jquery.mobile-1.1.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.1.0.min.js"; sourceTree = "<group>"; };
+		3B6CABE415903C1800CEF513 /* lib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lib.js; sourceTree = "<group>"; };
+		3B6CABE515903C1800CEF513 /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "underscore-min.js"; sourceTree = "<group>"; };
 		3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Config-AppDelegate.plist"; sourceTree = "<group>"; };
 		3BB19204159036FC007A5E2C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		3BCDBE8315880A7700EACAC7 /* RemoteWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteWebViewController.h; path = Controllers/RemoteWebViewController.h; sourceTree = "<group>"; };
@@ -154,6 +149,7 @@
 		3B2BE314158678B200422193 /* NewFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3B6CABE015903C1800CEF513 /* Javascripts */,
 				3BB191FA15902F50007A5E2C /* Library */,
 				3B2BE341158678D500422193 /* Controllers */,
 				3B2BE31D158678B200422193 /* AppDelegate.h */,
@@ -167,15 +163,10 @@
 		3B2BE315158678B200422193 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */,
-				3B80CC90158B9AE60056252E /* lib.js */,
-				3B80CC8A158B98C00056252E /* jquery-1.7.2.min.js */,
-				3B80CC8B158B98C00056252E /* underscore-min.js */,
 				3B2BE316158678B200422193 /* NewFramework-Info.plist */,
 				3B2BE317158678B200422193 /* InfoPlist.strings */,
 				3B2BE31A158678B200422193 /* main.m */,
 				3B2BE31C158678B200422193 /* NewFramework-Prefix.pch */,
-				3B80CC7E158B90F30056252E /* boot.js */,
 				3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */,
 			);
 			name = "Supporting Files";
@@ -218,6 +209,18 @@
 				3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		3B6CABE015903C1800CEF513 /* Javascripts */ = {
+			isa = PBXGroup;
+			children = (
+				3B6CABE115903C1800CEF513 /* boot.js */,
+				3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */,
+				3B6CABE315903C1800CEF513 /* jquery.mobile-1.1.0.min.js */,
+				3B6CABE415903C1800CEF513 /* lib.js */,
+				3B6CABE515903C1800CEF513 /* underscore-min.js */,
+			);
+			path = Javascripts;
 			sourceTree = "<group>";
 		};
 		3BB191FA15902F50007A5E2C /* Library */ = {
@@ -305,11 +308,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B80CC95158BB1F20056252E /* jquery.mobile-1.1.0.min.js in Resources */,
-				3B80CC92158BA3AC0056252E /* lib.js in Resources */,
-				3B80CC8F158B98CC0056252E /* jquery-1.7.2.min.js in Resources */,
-				3B80CC8E158B98CA0056252E /* underscore-min.js in Resources */,
-				3B80CC81158B91260056252E /* boot.js in Resources */,
 				3B2BE319158678B200422193 /* InfoPlist.strings in Resources */,
 				3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */,
 				3B6CABDF15903A3800CEF513 /* Types.h in Resources */,
@@ -365,14 +363,14 @@
 				3B2BE31F158678B200422193 /* AppDelegate.m in Sources */,
 				3B2BE322158678B200422193 /* NewFramework.xcdatamodeld in Sources */,
 				3BCDBE8515880A7700EACAC7 /* RemoteWebViewController.m in Sources */,
-				3B80CC7F158B90F30056252E /* boot.js in Sources */,
-				3B80CC8C158B98C00056252E /* jquery-1.7.2.min.js in Sources */,
-				3B80CC8D158B98C00056252E /* underscore-min.js in Sources */,
-				3B80CC91158B9AE60056252E /* lib.js in Sources */,
-				3B80CC94158BB1350056252E /* jquery.mobile-1.1.0.min.js in Sources */,
 				3B6CABD91590397D00CEF513 /* NSObject+ObjectConfig.m in Sources */,
 				3B6CABDA1590397D00CEF513 /* NSURL+QueryDictionary.m in Sources */,
 				3B6CABDD159039FC00CEF513 /* Functions.m in Sources */,
+				3B6CABE615903C1800CEF513 /* boot.js in Sources */,
+				3B6CABE715903C1800CEF513 /* jquery-1.7.2.min.js in Sources */,
+				3B6CABE815903C1800CEF513 /* jquery.mobile-1.1.0.min.js in Sources */,
+				3B6CABE915903C1800CEF513 /* lib.js in Sources */,
+				3B6CABEA15903C1800CEF513 /* underscore-min.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
