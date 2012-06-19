@@ -21,6 +21,10 @@
 		3B2BE32D158678B200422193 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2BE312158678B200422193 /* CoreData.framework */; };
 		3B2BE335158678B200422193 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B2BE333158678B200422193 /* InfoPlist.strings */; };
 		3B2BE338158678B200422193 /* NewFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BE337158678B200422193 /* NewFrameworkTests.m */; };
+		3B6CABD91590397D00CEF513 /* NSObject+ObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABD61590397D00CEF513 /* NSObject+ObjectConfig.m */; };
+		3B6CABDA1590397D00CEF513 /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */; };
+		3B6CABDD159039FC00CEF513 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABDC159039FC00CEF513 /* Functions.m */; };
+		3B6CABDF15903A3800CEF513 /* Types.h in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABDE15903A3800CEF513 /* Types.h */; };
 		3B80CC7F158B90F30056252E /* boot.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC7E158B90F30056252E /* boot.js */; };
 		3B80CC81158B91260056252E /* boot.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC7E158B90F30056252E /* boot.js */; };
 		3B80CC8C158B98C00056252E /* jquery-1.7.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC8A158B98C00056252E /* jquery-1.7.2.min.js */; };
@@ -32,7 +36,6 @@
 		3B80CC94158BB1350056252E /* jquery.mobile-1.1.0.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */; };
 		3B80CC95158BB1F20056252E /* jquery.mobile-1.1.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */; };
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
-		3BB19203159031CD007A5E2C /* NSObject+ObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB19202159031CD007A5E2C /* NSObject+ObjectConfig.m */; };
 		3BCDBE8515880A7700EACAC7 /* RemoteWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDBE8415880A7700EACAC7 /* RemoteWebViewController.m */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 		A1B227BC05AD4F64B9F661CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
@@ -69,15 +72,20 @@
 		3B2BE334158678B200422193 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B2BE336158678B200422193 /* NewFrameworkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFrameworkTests.h; sourceTree = "<group>"; };
 		3B2BE337158678B200422193 /* NewFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFrameworkTests.m; sourceTree = "<group>"; };
+		3B6CABD51590397D00CEF513 /* NSObject+ObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectConfig.h"; sourceTree = "<group>"; };
+		3B6CABD61590397D00CEF513 /* NSObject+ObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectConfig.m"; sourceTree = "<group>"; };
+		3B6CABD71590397D00CEF513 /* NSURL+QueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryDictionary.h"; sourceTree = "<group>"; };
+		3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryDictionary.m"; sourceTree = "<group>"; };
+		3B6CABDB1590399100CEF513 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		3B6CABDC159039FC00CEF513 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
+		3B6CABDE15903A3800CEF513 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		3B80CC7E158B90F30056252E /* boot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = boot.js; path = Javascripts/boot.js; sourceTree = "<group>"; };
 		3B80CC8A158B98C00056252E /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.7.2.min.js"; path = "Javascripts/jquery-1.7.2.min.js"; sourceTree = "<group>"; };
 		3B80CC8B158B98C00056252E /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "underscore-min.js"; path = "Javascripts/underscore-min.js"; sourceTree = "<group>"; };
 		3B80CC90158B9AE60056252E /* lib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = lib.js; path = Javascripts/lib.js; sourceTree = "<group>"; };
 		3B80CC93158BB1350056252E /* jquery.mobile-1.1.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery.mobile-1.1.0.min.js"; path = "Javascripts/jquery.mobile-1.1.0.min.js"; sourceTree = "<group>"; };
 		3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Config-AppDelegate.plist"; sourceTree = "<group>"; };
-		3BB19201159031CD007A5E2C /* NSObject+ObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectConfig.h"; sourceTree = "<group>"; };
-		3BB19202159031CD007A5E2C /* NSObject+ObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectConfig.m"; sourceTree = "<group>"; };
-		3BB19204159036FC007A5E2C /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		3BB19204159036FC007A5E2C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		3BCDBE8315880A7700EACAC7 /* RemoteWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteWebViewController.h; path = Controllers/RemoteWebViewController.h; sourceTree = "<group>"; };
 		3BCDBE8415880A7700EACAC7 /* RemoteWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoteWebViewController.m; path = Controllers/RemoteWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,12 +209,25 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		3B6CABD41590397D00CEF513 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3B6CABD51590397D00CEF513 /* NSObject+ObjectConfig.h */,
+				3B6CABD61590397D00CEF513 /* NSObject+ObjectConfig.m */,
+				3B6CABD71590397D00CEF513 /* NSURL+QueryDictionary.h */,
+				3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		3BB191FA15902F50007A5E2C /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				3BB19201159031CD007A5E2C /* NSObject+ObjectConfig.h */,
-				3BB19202159031CD007A5E2C /* NSObject+ObjectConfig.m */,
-				3BB19204159036FC007A5E2C /* Macros.h */,
+				3B6CABD41590397D00CEF513 /* Categories */,
+				3B6CABDB1590399100CEF513 /* Categories.h */,
+				3BB19204159036FC007A5E2C /* Functions.h */,
+				3B6CABDC159039FC00CEF513 /* Functions.m */,
+				3B6CABDE15903A3800CEF513 /* Types.h */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -291,6 +312,7 @@
 				3B80CC81158B91260056252E /* boot.js in Resources */,
 				3B2BE319158678B200422193 /* InfoPlist.strings in Resources */,
 				3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */,
+				3B6CABDF15903A3800CEF513 /* Types.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +370,9 @@
 				3B80CC8D158B98C00056252E /* underscore-min.js in Sources */,
 				3B80CC91158B9AE60056252E /* lib.js in Sources */,
 				3B80CC94158BB1350056252E /* jquery.mobile-1.1.0.min.js in Sources */,
-				3BB19203159031CD007A5E2C /* NSObject+ObjectConfig.m in Sources */,
+				3B6CABD91590397D00CEF513 /* NSObject+ObjectConfig.m in Sources */,
+				3B6CABDA1590397D00CEF513 /* NSURL+QueryDictionary.m in Sources */,
+				3B6CABDD159039FC00CEF513 /* Functions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

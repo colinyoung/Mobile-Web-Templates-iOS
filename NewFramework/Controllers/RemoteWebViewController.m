@@ -92,8 +92,13 @@
     return template;
 }
 
--(void)test {
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:@"" delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
+-(void)test:(NSDictionary *)options {
+    NSString *message = @"";
+    if ([options count]) {
+        message = [GRMustacheTemplate renderObject:options fromString:@"Message was: {{say}}" error:NULL];
+    }
+    
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:message delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
     [av show];
 }
 
@@ -112,12 +117,12 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         NSURL *fixedURL = [NSURL URLWithString:requestString];
         
         // Extract the selector name from the URL
-        NSString *function = [fixedURL host];
+        NSString *function = [NSString stringWithFormat:@"%@:", [fixedURL host]];
         
-        // Call the given selector
-        NSLog(@"%@", function);
+        // Extract query parameters
+        NSDictionary *queryParameters = [fixedURL queryDictionary];
         
-        [self performSelector:NSSelectorFromString(function)];
+        [self performSelector:NSSelectorFromString(function) withObject:queryParameters];
         
         // Cancel the location change
         return NO;

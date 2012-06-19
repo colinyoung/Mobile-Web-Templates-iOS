@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "NSObject+ObjectConfig.h"
 
 @implementation AppDelegate
 
