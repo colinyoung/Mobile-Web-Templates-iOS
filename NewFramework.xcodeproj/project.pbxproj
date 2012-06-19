@@ -41,6 +41,7 @@
 		3B6CAC04159041EF00CEF513 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC03159041EF00CEF513 /* bootstrap.min.css */; };
 		3B6CAC071590488F00CEF513 /* mustache.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CAC061590488F00CEF513 /* mustache.js */; };
 		3B6CAC081590495800CEF513 /* mustache.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC061590488F00CEF513 /* mustache.js */; };
+		3B6CAC0B15904B3B00CEF513 /* UIWebView+General.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CAC0A15904B3B00CEF513 /* UIWebView+General.m */; };
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
 		3BCDBE8515880A7700EACAC7 /* RemoteWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDBE8415880A7700EACAC7 /* RemoteWebViewController.m */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
@@ -95,6 +96,8 @@
 		3B6CAC0115903F8C00CEF513 /* theme-ios.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "theme-ios.css"; sourceTree = "<group>"; };
 		3B6CAC03159041EF00CEF513 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.min.css; path = "../../../../Downloads/bootstrap 3/css/bootstrap.min.css"; sourceTree = "<group>"; };
 		3B6CAC061590488F00CEF513 /* mustache.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mustache.js; sourceTree = "<group>"; };
+		3B6CAC0915904B3B00CEF513 /* UIWebView+General.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+General.h"; sourceTree = "<group>"; };
+		3B6CAC0A15904B3B00CEF513 /* UIWebView+General.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+General.m"; sourceTree = "<group>"; };
 		3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Config-AppDelegate.plist"; sourceTree = "<group>"; };
 		3BB19204159036FC007A5E2C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		3BCDBE8315880A7700EACAC7 /* RemoteWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteWebViewController.h; path = Controllers/RemoteWebViewController.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				3B6CABD61590397D00CEF513 /* NSObject+ObjectConfig.m */,
 				3B6CABD71590397D00CEF513 /* NSURL+QueryDictionary.h */,
 				3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */,
+				3B6CAC0915904B3B00CEF513 /* UIWebView+General.h */,
+				3B6CAC0A15904B3B00CEF513 /* UIWebView+General.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				3B6CABEA15903C1800CEF513 /* underscore-min.js in Sources */,
 				3B6CABEC15903D0C00CEF513 /* jgestures.min.js in Sources */,
 				3B6CAC071590488F00CEF513 /* mustache.js in Sources */,
+				3B6CAC0B15904B3B00CEF513 /* UIWebView+General.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

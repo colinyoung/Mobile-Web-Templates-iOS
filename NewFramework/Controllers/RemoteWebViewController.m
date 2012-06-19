@@ -100,16 +100,6 @@
     return template;
 }
 
--(void)test:(NSDictionary *)options {
-    NSString *message = @"";
-    if ([options count]) {
-        message = [GRMustacheTemplate renderObject:options fromString:@"Message was: {{say}}" error:NULL];
-    }
-    
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:message delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
-    [av show];
-}
-
 #pragma mark - UIWebViewDelegate methods
 - (BOOL)webView:(UIWebView *)webView 
 shouldStartLoadWithRequest:(NSURLRequest *)request 
@@ -138,6 +128,25 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     
     // Accept this location change
     return YES;
+    
+}
+
+#pragma mark - Selectors for javascript
+- (void)test:(NSDictionary *)options {
+    NSString *message = @"";
+    if ([options count]) {
+        message = [GRMustacheTemplate renderObject:options fromString:@"Message was: {{say}}" error:NULL];
+    }
+    
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:message delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
+    [av show];
+}
+
+- (void)showImage:(NSDictionary *)options {
+    [self.webView inject:[NSString stringWithFormat:@"<p><img src=\"%@\" /></p>", [options objectForKey:@"url"]]];
+}
+
+- (void)showTableView:(NSDictionary *)options {
     
 }
 
