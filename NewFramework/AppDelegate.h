@@ -11,6 +11,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     RemoteWebViewController *_rootVC;
+    NSDictionary *_config;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -20,6 +21,9 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, retain) RemoteWebViewController *rootVC;
+@property (nonatomic, retain) NSDictionary *config;
+
+- (void)addSetupBlock:(Block)block;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

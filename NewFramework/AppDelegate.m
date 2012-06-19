@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSObject+ObjectConfig.h"
 
 @implementation AppDelegate
 
@@ -16,11 +17,28 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 @synthesize rootVC = _rootVC;
+@synthesize config = _config;
+
+//  =>  Singletons
+
+//  - Operation queue
+static NSOperationQueue *sharedOperationQueue = NULL;
+
++ (NSOperationQueue*)sharedOperationQueue
+{
+    @synchronized(self)
+    {
+        if (sharedOperationQueue == NULL)
+            sharedOperationQueue = [[NSOperationQueue alloc] init];
+    }
+    return sharedOperationQueue;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+{    
+    /* Setup Window */
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
     self.window.backgroundColor = [UIColor whiteColor];
     
     self.rootVC = [[RemoteWebViewController alloc] initWithNibName:nil bundle:nil];
@@ -29,6 +47,14 @@
     [self.window addSubview:navVC.view];
     
     [self.window makeKeyAndVisible];
+    
+    /* Add long-running stuff to execute outside this method
+     (some instances will close if this method takes too long to return)
+     */
+    [[[self class] sharedOperationQueue] addOperationWithBlock:^{
+        // Setup the configuration
+        self.config = [[self class] loadConfigForObject];
+    }];
     
     return YES;
 }
