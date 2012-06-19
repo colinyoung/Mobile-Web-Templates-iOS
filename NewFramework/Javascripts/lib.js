@@ -13,7 +13,7 @@ MobileFramework.prototype = {
     $(s).each(function(i, el) {
       var href = $(el).attr('href');
       $(el).attr('href', 'javascript:;'); // unset and replace w/ event listener
-      $(el).click(function() {
+      $(el).bind('tapone', function() {
         _this.callback(href);
       });
     })

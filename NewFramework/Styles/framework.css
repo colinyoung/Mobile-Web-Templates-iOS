@@ -5,5 +5,10 @@ body {
 }
 
 .view {
-    padding: 10px;
+    padding: 10px 6px;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(255,255,255,0.0); /* Remove */
+  -webkit-touch-callout: none;
 }
