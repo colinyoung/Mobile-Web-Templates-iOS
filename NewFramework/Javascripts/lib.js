@@ -26,3 +26,16 @@ MobileFramework.prototype = {
     iframe = null;
   }
 };
+
+/* View: Handles generation of cross-platform view elements. */
+var View = function() {};
+
+View.prototype.toString = function() {
+  var s = Mustache.render('<div class="{{classes}}" id="view-{{timestamp}}">asdf</div>', {
+    classes: "view",
+    timestamp: (new Date()).getUTCMilliseconds().toString()
+  });
+  
+  return s;
+}
+

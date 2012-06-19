@@ -1,8 +1,8 @@
 /* Let's test javascript communicating back to the objective-c. */
 $(function () {
    
-  $('body').append('<div class="container-fluid view">');
-  $('body').append('<div class="row-fluid">');
+  $('body').append('<div class="container-fluid">');
+  $('body').append('<div class="row-fluid view">');
   
   $('body').append('<div class="span12">');
   
@@ -11,9 +11,16 @@ $(function () {
   $('body').append('</div>');
   
   $('body').append('<div class="row-fluid">' +
-                        '<div class="span6">Col 1</div>' +
-                        '<div class="span6">Col 2</div>' +
+                        '<div class="span6">Hello</div>' +
+                        '<div class="span6">' + new Date().toUTCString() + '</div>' +
                    '</div></div>');
+                   
+  $('body').append('<div class="row-fluid">');
+  
+    var view = new View();
+    $('body').append(view.toString())
+  
+  $('body').append('</div>');
   
   $('body').append('</div>');
   

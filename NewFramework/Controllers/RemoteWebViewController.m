@@ -75,6 +75,7 @@
     
             "<script src=\"jquery-1.7.2.min.js\"></script>"
             "<script src=\"jgestures.min.js\"></script>"
+            "<script src=\"mustache.js\"></script>"
             "<script src=\"underscore-min.js\"></script>"
             "<script src=\"lib.js\"></script>"
             "<script src=\"boot.js\"></script>"
