@@ -1,0 +1,7 @@
+.tableview .row, .list .row {
+    border-bottom: 1px solid #ccc;
+}
+
+body {
+    color: #000;
+}

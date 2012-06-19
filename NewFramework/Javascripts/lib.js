@@ -18,9 +18,6 @@ MobileFramework.prototype = {
       });
     })
   },
-  upstream: function() {
-    
-  },
   callback: function(href) {    
     var iframe = document.createElement("IFRAME");
     iframe.setAttribute("src", href);

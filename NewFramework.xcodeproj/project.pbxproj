@@ -27,9 +27,18 @@
 		3B6CABDF15903A3800CEF513 /* Types.h in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABDE15903A3800CEF513 /* Types.h */; };
 		3B6CABE615903C1800CEF513 /* boot.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE115903C1800CEF513 /* boot.js */; };
 		3B6CABE715903C1800CEF513 /* jquery-1.7.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */; };
-		3B6CABE815903C1800CEF513 /* jquery.mobile-1.1.0.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE315903C1800CEF513 /* jquery.mobile-1.1.0.min.js */; };
 		3B6CABE915903C1800CEF513 /* lib.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE415903C1800CEF513 /* lib.js */; };
 		3B6CABEA15903C1800CEF513 /* underscore-min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABE515903C1800CEF513 /* underscore-min.js */; };
+		3B6CABEC15903D0C00CEF513 /* jgestures.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABEB15903D0C00CEF513 /* jgestures.min.js */; };
+		3B6CABF415903E4500CEF513 /* jgestures.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABEB15903D0C00CEF513 /* jgestures.min.js */; };
+		3B6CABF515903E4500CEF513 /* boot.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE115903C1800CEF513 /* boot.js */; };
+		3B6CABF615903E4500CEF513 /* jquery-1.7.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */; };
+		3B6CABF715903E4500CEF513 /* lib.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE415903C1800CEF513 /* lib.js */; };
+		3B6CABF815903E4500CEF513 /* underscore-min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE515903C1800CEF513 /* underscore-min.js */; };
+		3B6CABFD15903E8100CEF513 /* framework.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABFC15903E8100CEF513 /* framework.css */; };
+		3B6CABFF15903F3A00CEF513 /* bootstrap-responsive.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */; };
+		3B6CAC0215903F8C00CEF513 /* theme-ios.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC0115903F8C00CEF513 /* theme-ios.css */; };
+		3B6CAC04159041EF00CEF513 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC03159041EF00CEF513 /* bootstrap.min.css */; };
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
 		3BCDBE8515880A7700EACAC7 /* RemoteWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDBE8415880A7700EACAC7 /* RemoteWebViewController.m */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
@@ -76,9 +85,13 @@
 		3B6CABDE15903A3800CEF513 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		3B6CABE115903C1800CEF513 /* boot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = boot.js; sourceTree = "<group>"; };
 		3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
-		3B6CABE315903C1800CEF513 /* jquery.mobile-1.1.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.1.0.min.js"; sourceTree = "<group>"; };
 		3B6CABE415903C1800CEF513 /* lib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lib.js; sourceTree = "<group>"; };
 		3B6CABE515903C1800CEF513 /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "underscore-min.js"; sourceTree = "<group>"; };
+		3B6CABEB15903D0C00CEF513 /* jgestures.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jgestures.min.js; sourceTree = "<group>"; };
+		3B6CABFC15903E8100CEF513 /* framework.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = framework.css; sourceTree = "<group>"; };
+		3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "bootstrap-responsive.min.css"; path = "../../../../Downloads/bootstrap 3/css/bootstrap-responsive.min.css"; sourceTree = "<group>"; };
+		3B6CAC0115903F8C00CEF513 /* theme-ios.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "theme-ios.css"; sourceTree = "<group>"; };
+		3B6CAC03159041EF00CEF513 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.min.css; path = "../../../../Downloads/bootstrap 3/css/bootstrap.min.css"; sourceTree = "<group>"; };
 		3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Config-AppDelegate.plist"; sourceTree = "<group>"; };
 		3BB19204159036FC007A5E2C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		3BCDBE8315880A7700EACAC7 /* RemoteWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteWebViewController.h; path = Controllers/RemoteWebViewController.h; sourceTree = "<group>"; };
@@ -149,6 +162,7 @@
 		3B2BE314158678B200422193 /* NewFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3B6CABFB15903E7600CEF513 /* Styles */,
 				3B6CABE015903C1800CEF513 /* Javascripts */,
 				3BB191FA15902F50007A5E2C /* Library */,
 				3B2BE341158678D500422193 /* Controllers */,
@@ -214,13 +228,32 @@
 		3B6CABE015903C1800CEF513 /* Javascripts */ = {
 			isa = PBXGroup;
 			children = (
+				3B6CABEB15903D0C00CEF513 /* jgestures.min.js */,
 				3B6CABE115903C1800CEF513 /* boot.js */,
 				3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */,
-				3B6CABE315903C1800CEF513 /* jquery.mobile-1.1.0.min.js */,
 				3B6CABE415903C1800CEF513 /* lib.js */,
 				3B6CABE515903C1800CEF513 /* underscore-min.js */,
 			);
 			path = Javascripts;
+			sourceTree = "<group>";
+		};
+		3B6CABFB15903E7600CEF513 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				3B6CAC0015903F8600CEF513 /* Themes */,
+				3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */,
+				3B6CAC03159041EF00CEF513 /* bootstrap.min.css */,
+				3B6CABFC15903E8100CEF513 /* framework.css */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		3B6CAC0015903F8600CEF513 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				3B6CAC0115903F8C00CEF513 /* theme-ios.css */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		3BB191FA15902F50007A5E2C /* Library */ = {
@@ -308,9 +341,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6CABF415903E4500CEF513 /* jgestures.min.js in Resources */,
+				3B6CABF515903E4500CEF513 /* boot.js in Resources */,
+				3B6CABF615903E4500CEF513 /* jquery-1.7.2.min.js in Resources */,
+				3B6CABF715903E4500CEF513 /* lib.js in Resources */,
+				3B6CABF815903E4500CEF513 /* underscore-min.js in Resources */,
 				3B2BE319158678B200422193 /* InfoPlist.strings in Resources */,
 				3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */,
 				3B6CABDF15903A3800CEF513 /* Types.h in Resources */,
+				3B6CABFD15903E8100CEF513 /* framework.css in Resources */,
+				3B6CABFF15903F3A00CEF513 /* bootstrap-responsive.min.css in Resources */,
+				3B6CAC0215903F8C00CEF513 /* theme-ios.css in Resources */,
+				3B6CAC04159041EF00CEF513 /* bootstrap.min.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,9 +410,9 @@
 				3B6CABDD159039FC00CEF513 /* Functions.m in Sources */,
 				3B6CABE615903C1800CEF513 /* boot.js in Sources */,
 				3B6CABE715903C1800CEF513 /* jquery-1.7.2.min.js in Sources */,
-				3B6CABE815903C1800CEF513 /* jquery.mobile-1.1.0.min.js in Sources */,
 				3B6CABE915903C1800CEF513 /* lib.js in Sources */,
 				3B6CABEA15903C1800CEF513 /* underscore-min.js in Sources */,
+				3B6CABEC15903D0C00CEF513 /* jgestures.min.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
