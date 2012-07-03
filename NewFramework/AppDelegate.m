@@ -40,7 +40,7 @@ static NSOperationQueue *sharedOperationQueue = NULL;
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.rootVC = [[RemoteWebViewController alloc] initWithNibName:nil bundle:nil];
+    self.rootVC = [[WebController alloc] initWithNibName:nil bundle:nil];
     
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.rootVC];
     [self.window addSubview:navVC.view];

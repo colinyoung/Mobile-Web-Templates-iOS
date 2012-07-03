@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RemoteWebViewController.h"
+#import "WebController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    RemoteWebViewController *_rootVC;
+    WebController *_rootVC;
     NSDictionary *_config;
 }
 
@@ -20,7 +20,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property (nonatomic, retain) RemoteWebViewController *rootVC;
+@property (nonatomic, retain) WebController *rootVC;
 @property (nonatomic, retain) NSDictionary *config;
 
 - (void)addSetupBlock:(Block)block;
