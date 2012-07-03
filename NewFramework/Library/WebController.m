@@ -1,7 +1,7 @@
-#import "RemoteWebViewController.h"
+#import "WebController.h"
 #import "GRMustache.h"
 
-@implementation RemoteWebViewController
+@implementation WebController
 
 @synthesize webView = _webView;
 
@@ -43,7 +43,7 @@
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
-    [self.webView loadHTMLString:[[self class] bootString] baseURL:baseURL];
+    [self.webView loadHTMLString:bootString() baseURL:baseURL];
     
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(dumpHTML) userInfo:nil repeats:NO];
 }
@@ -62,28 +62,6 @@
 }
 
 #pragma mark - JS methods
-+(NSString *) bootString {
-    return @""
-    "<html>"
-        "<head>"
-            "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
-
-            "<link rel=\"stylesheet\" href=\"bootstrap.min.css\" />"
-            "<link rel=\"stylesheet\" href=\"bootstrap-responsive.min.css\" />"
-            "<link rel=\"stylesheet\" href=\"framework.css\" />"
-            "<link rel=\"stylesheet\" href=\"theme-ios.css\" />"
-    
-            "<script src=\"jquery-1.7.2.min.js\"></script>"
-            "<script src=\"jgestures.min.js\"></script>"
-            "<script src=\"mustache.js\"></script>"
-            "<script src=\"underscore-min.js\"></script>"
-            "<script src=\"lib.js\"></script>"
-            "<script src=\"boot.js\"></script>"
-        "</head>"
-        "<body>"
-        "</body>"
-    "</html>";
-}
 
 -(NSString *) dumpHTML {
     NSMutableString *template = [NSMutableString stringWithString:@"<!doctype html>\n<html>\n"];
@@ -148,13 +126,13 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 - (void)showTableView:(NSDictionary *)options {
     [self.webView inject:@"<div class=\"tableview\">"
-        "<ul>"
-            "<li><p>Dr. Jekyll</p></li>"
-            "<li><p>Mr. Hyde</p></li>"     
-            "<li><p>The Pagemaster</p></li>"
-            "<li><p><a href=\"ios-callback:test?say=Maculay%20Culkin%20is%20scary\">Maculay Culkin</a></p></li>"
-            "<li><p>The Drippy Ceiling</p></li>"
-        "</ul>"
+     "<ul>"
+     "<li><p>Dr. Jekyll</p></li>"
+     "<li><p>Mr. Hyde</p></li>"     
+     "<li><p>The Pagemaster</p></li>"
+     "<li><p><a href=\"ios-callback:test?say=Maculay%20Culkin%20is%20scary\">Maculay Culkin</a></p></li>"
+     "<li><p>The Drippy Ceiling</p></li>"
+     "</ul>"
      "</div>"];
 }
 
