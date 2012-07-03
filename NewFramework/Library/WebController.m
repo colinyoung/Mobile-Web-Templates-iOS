@@ -1,9 +1,12 @@
 #import "WebController.h"
 #import "GRMustache.h"
+#import "AppDelegate.h"
 
 @implementation WebController
 
 @synthesize webView = _webView;
+@synthesize route = _route;
+@synthesize baseURL = _baseURL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -11,6 +14,21 @@
     if (self) {
         // Custom initialization
         self.title = @"Loading...";
+    }
+    return self;
+}
+
+- (id)initWithRoute:(NSString *)route {
+    NSDictionary *config = [AppDelegate loadConfigForObject];
+    return [self initWithBaseURL:[config objectForKey:@"baseURL"] route:route];
+}
+
+- (id)initWithBaseURL:(NSString *)baseURL route:(NSString *)route {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        self.title = @"Loading...";
+        self.baseURL = baseURL;
+        self.route = route;
     }
     return self;
 }
@@ -65,12 +83,13 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType {
     
     NSLog(@"webView:shouldStartLoad:navType");
+    NSString *prefix = [[AppDelegate loadConfigForObject] objectForKey:@"prefix"];
     NSString *requestString = [[request URL] absoluteString];
     NSLog(@"Loading %@", requestString);
     // Intercept custom location change, URL begins with "js-call:"
-    if ([requestString hasPrefix:@"ios-callback:"]) {
+    if ([requestString hasPrefix:prefix]) {
         
-        requestString = [requestString stringByReplacingOccurrencesOfString:@"ios-callback:" withString:@"ios-callback://"];
+        requestString = [requestString stringByReplacingOccurrencesOfString:prefix withString:[@"://" stringByAppendingString:prefix]];
         NSURL *fixedURL = [NSURL URLWithString:requestString];
         
         // Extract the selector name from the URL
@@ -79,7 +98,10 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         // Extract query parameters
         NSDictionary *queryParameters = [fixedURL queryDictionary];
         
-        [self performSelector:NSSelectorFromString(function) withObject:queryParameters];
+        SEL method = NSSelectorFromString(function);
+        if (![self respondsToSelector:method]) return NO;
+        
+        [self performSelector:method withObject:queryParameters];
         
         // Cancel the location change
         return NO;
@@ -88,33 +110,6 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     // Accept this location change
     return YES;
     
-}
-
-#pragma mark - Selectors for javascript
-- (void)test:(NSDictionary *)options {
-    NSString *message = @"";
-    if ([options count]) {
-        message = [GRMustacheTemplate renderObject:options fromString:@"Message was: {{say}}" error:NULL];
-    }
-    
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"JSTest" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [av show];
-}
-
-- (void)showImage:(NSDictionary *)options {
-    [self.webView inject:[NSString stringWithFormat:@"<p><img src=\"%@\" /></p>", [options objectForKey:@"url"]]];
-}
-
-- (void)showTableView:(NSDictionary *)options {
-    [self.webView inject:@"<div class=\"tableview\">"
-     "<ul>"
-     "<li><p>Dr. Jekyll</p></li>"
-     "<li><p>Mr. Hyde</p></li>"     
-     "<li><p>The Pagemaster</p></li>"
-     "<li><p><a href=\"ios-callback:test?say=Maculay%20Culkin%20is%20scary\">Maculay Culkin</a></p></li>"
-     "<li><p>The Drippy Ceiling</p></li>"
-     "</ul>"
-     "</div>"];
 }
 
 @end

@@ -1,5 +1,5 @@
 var MobileFramework = function (element) {
-  this.prefix = "ios-callback";
+  this.prefix = "mwt";
   this.element = element || $('body');
     
   this.interceptAllLinks();

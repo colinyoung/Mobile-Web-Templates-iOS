@@ -6,7 +6,7 @@ $(function () {
   
   $('body').append('<div class="span12">');
   
-  $('body').append('<p><a class="btn btn-primary btn-large" href="ios-callback:test?say=hello">Click me to say hello.</a></p>');
+  $('body').append('<p><a class="btn btn-primary btn-large" href="mwt:test?say=hello">Click me to say hello.</a></p>');
   
   $('body').append('</div>');
   
@@ -24,13 +24,13 @@ $(function () {
   
   $('body').append('<div class="row-fluid">');
   
-    $('body').append('<p><a class="btn btn-primary btn-large" href="ios-callback:showImage?url=http://rgifs.gifbin.com/1238409599_nom_nom.gif">Click me to tell Obj-C to show an image below.</a></p>');
+    $('body').append('<p><a class="btn btn-primary btn-large" href="mwt:showImage?url=http://rgifs.gifbin.com/1238409599_nom_nom.gif">Click me to tell Obj-C to show an image below.</a></p>');
     
   $('body').append('</div>');
   
   $('body').append('<div class="row-fluid">');
   
-    $('body').append('<p><a class="btn btn-primary btn-large" href="ios-callback:showTableView">Show a tableview.</a></p>');
+    $('body').append('<p><a class="btn btn-primary btn-large" href="mwt:showTableView">Show a tableview.</a></p>');
     
   $('body').append('</div>');
   

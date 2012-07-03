@@ -40,7 +40,7 @@ static NSOperationQueue *sharedOperationQueue = NULL;
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.rootVC = [[WebController alloc] initWithNibName:nil bundle:nil];
+    self.rootVC = [[WebController alloc] initWithRoute:@"/user/1/friends"];
     
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.rootVC];
     [self.window addSubview:navVC.view];
@@ -213,6 +213,11 @@ static NSOperationQueue *sharedOperationQueue = NULL;
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - class methods
++ (AppDelegate *)appDelegate {
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
 @end

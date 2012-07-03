@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WebController.h"
+#import "NSObject+ObjectConfig.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     WebController *_rootVC;
@@ -27,5 +28,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
++ (AppDelegate*)appDelegate;
 
 @end
