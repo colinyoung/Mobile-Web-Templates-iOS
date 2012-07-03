@@ -22,6 +22,7 @@
 		3B2BE335158678B200422193 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B2BE333158678B200422193 /* InfoPlist.strings */; };
 		3B2BE338158678B200422193 /* NewFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BE337158678B200422193 /* NewFrameworkTests.m */; };
 		3B538B4615A2B2C900744CE3 /* WebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B538B4515A2B2C900744CE3 /* WebController.m */; };
+		3B538B4915A2B86B00744CE3 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B538B4815A2B86B00744CE3 /* Loader.m */; };
 		3B6CABD91590397D00CEF513 /* NSObject+ObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABD61590397D00CEF513 /* NSObject+ObjectConfig.m */; };
 		3B6CABDA1590397D00CEF513 /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABD81590397D00CEF513 /* NSURL+QueryDictionary.m */; };
 		3B6CABDD159039FC00CEF513 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CABDC159039FC00CEF513 /* Functions.m */; };
@@ -78,6 +79,8 @@
 		3B2BE337158678B200422193 /* NewFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFrameworkTests.m; sourceTree = "<group>"; };
 		3B538B4415A2B2C900744CE3 /* WebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebController.h; sourceTree = "<group>"; };
 		3B538B4515A2B2C900744CE3 /* WebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebController.m; sourceTree = "<group>"; };
+		3B538B4715A2B86B00744CE3 /* Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
+		3B538B4815A2B86B00744CE3 /* Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loader.m; sourceTree = "<group>"; };
 		3B6CABD51590397D00CEF513 /* NSObject+ObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectConfig.h"; sourceTree = "<group>"; };
 		3B6CABD61590397D00CEF513 /* NSObject+ObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectConfig.m"; sourceTree = "<group>"; };
 		3B6CABD71590397D00CEF513 /* NSURL+QueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryDictionary.h"; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				3BB19204159036FC007A5E2C /* Functions.h */,
 				3B6CABDC159039FC00CEF513 /* Functions.m */,
 				3B6CABDE15903A3800CEF513 /* Types.h */,
+				3B538B4715A2B86B00744CE3 /* Loader.h */,
+				3B538B4815A2B86B00744CE3 /* Loader.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				3B6CAC0E15904E3000CEF513 /* NSString+HTML.m in Sources */,
 				3B6CAC1115904E9D00CEF513 /* GTMNSString+HTML.m in Sources */,
 				3B538B4615A2B2C900744CE3 /* WebController.m in Sources */,
+				3B538B4915A2B86B00744CE3 /* Loader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
