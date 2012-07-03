@@ -5,5 +5,6 @@
 
 - (void) inject:(NSString *)HTML;
 - (void) inject:(NSString *)HTML intoElement:(NSString *)element;
+- (NSString *) HTML;
 
 @end

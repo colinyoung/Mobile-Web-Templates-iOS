@@ -44,8 +44,6 @@
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
     [self.webView loadHTMLString:bootString() baseURL:baseURL];
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(dumpHTML) userInfo:nil repeats:NO];
 }
 
 - (void)viewDidUnload
@@ -59,23 +57,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - JS methods
-
--(NSString *) dumpHTML {
-    NSMutableString *template = [NSMutableString stringWithString:@"<!doctype html>\n<html>\n"];
-    [template appendString:@"<head>\n"];
-    [template appendFormat:@"%@\n", [self.webView stringByEvaluatingJavaScriptFromString:@"document.head.innerHTML"]];
-    [template appendString:@"</head>\n"];
-    
-    [template appendString:@"<body>\n"];
-    [template appendFormat:@"%@\n", [self.webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"]];
-    [template appendString:@"</body>"];
-    
-    NSLog(@"HTML: \n%@", template);
-    
-    return template;
 }
 
 #pragma mark - UIWebViewDelegate methods
