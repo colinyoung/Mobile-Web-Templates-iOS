@@ -62,7 +62,7 @@
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
-    [self.webView loadHTMLString:bootString() baseURL:baseURL];
+    [self.webView loadHTMLString:bootString_debug() baseURL:baseURL];
 }
 
 - (void)viewDidUnload
@@ -116,9 +116,11 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     
 }
 
--(void)test:(NSDictionary *)params {
+-(void)loadHTML:(NSDictionary *)params {
     Loader *loader = [[Loader alloc] initWithRoute:[self.baseURL stringByAppendingString:@"/user/1/friends"]];    
-    NSLog(@"%@", [loader loadHTML]);
+    NSString *html = [loader loadHTML];
+    
+    [self.webView inject:html];
 }
 
 @end
