@@ -8,5 +8,6 @@
 
 -(id)initWithRoute:(NSString*)route;
 -(id)loadJSON;
+-(NSString *)loadHTML;
 
 @end

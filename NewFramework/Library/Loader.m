@@ -22,4 +22,8 @@
     return [response jsonObject];
 }
 
+-(NSString *)loadHTML {
+    return [[self loadJSON] objectForKey:@"html"];
+}
+
 @end
