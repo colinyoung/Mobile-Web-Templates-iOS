@@ -24,8 +24,6 @@
 @property (nonatomic, retain) WebController *rootVC;
 @property (nonatomic, retain) NSDictionary *config;
 
-- (void)addSetupBlock:(Block)block;
-
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

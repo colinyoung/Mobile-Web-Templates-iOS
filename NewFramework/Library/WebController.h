@@ -12,6 +12,4 @@
 - (id)initWithRoute:(NSString *)route;
 - (id)initWithBaseURL:(NSString*)baseURL route:(NSString *)route;
 
--(NSString *) dumpHTML;
-
 @end

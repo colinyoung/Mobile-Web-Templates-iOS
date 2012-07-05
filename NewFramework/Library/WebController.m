@@ -118,7 +118,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 -(void)test:(NSDictionary *)params {
     Loader *loader = [[Loader alloc] initWithRoute:[self.baseURL stringByAppendingString:@"/user/1/friends"]];    
-    NSLog(@"%@", [loader loadJSON]);
+    NSLog(@"%@", [loader loadHTML]);
 }
 
 @end
