@@ -7,5 +7,6 @@
 @property (nonatomic, retain) NSString *route;
 
 -(id)initWithRoute:(NSString*)route;
+-(id)loadJSON;
 
 @end

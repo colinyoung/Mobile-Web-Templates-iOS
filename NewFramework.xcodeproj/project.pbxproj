@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B0FC95015A5E25D00087094 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FC94D15A5E25D00087094 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0FC95415A5E33C00087094 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0FC95315A5E33C00087094 /* Security.framework */; };
 		3B2713B315A5DE8A007EF05E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3B2713A815A5DE8A007EF05E /* .gitignore */; };
 		3B2713B415A5DE8A007EF05E /* HttpUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2713AB15A5DE8A007EF05E /* HttpUserCredentials.m */; };
@@ -66,10 +65,6 @@
 /* Begin PBXFileReference section */
 		19AB6604567D4D7DA8617EE8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2888E76D66824F518715A519 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		3B0FC94B15A5E25D00087094 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		3B0FC94C15A5E25D00087094 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		3B0FC94D15A5E25D00087094 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		3B0FC94E15A5E25D00087094 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3B0FC95315A5E33C00087094 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B2713A815A5DE8A007EF05E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3B2713AA15A5DE8A007EF05E /* HttpUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUserCredentials.h; sourceTree = "<group>"; };
@@ -160,18 +155,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B0FC94A15A5E25D00087094 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				3B0FC94B15A5E25D00087094 /* CHANGELOG.md */,
-				3B0FC94C15A5E25D00087094 /* JSONKit.h */,
-				3B0FC94D15A5E25D00087094 /* JSONKit.m */,
-				3B0FC94E15A5E25D00087094 /* README.md */,
-			);
-			name = JSONKit;
-			path = "Supporting Files/JSONKit";
-			sourceTree = SOURCE_ROOT;
-		};
 		3B2713A715A5DE8A007EF05E /* NetworkUtility */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +233,6 @@
 		3B2BE315158678B200422193 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B0FC94A15A5E25D00087094 /* JSONKit */,
 				3B2713A715A5DE8A007EF05E /* NetworkUtility */,
 				3B2BE316158678B200422193 /* NewFramework-Info.plist */,
 				3B2BE317158678B200422193 /* InfoPlist.strings */,
@@ -504,7 +486,6 @@
 				3B2713B515A5DE8A007EF05E /* SFHFKeychainUtils.m in Sources */,
 				3B2713B615A5DE8A007EF05E /* NetworkUtility.m in Sources */,
 				3B2713B815A5DE8A007EF05E /* RemoteNetworkUtility.m in Sources */,
-				3B0FC95015A5E25D00087094 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

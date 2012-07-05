@@ -1,6 +1,7 @@
 #import "WebController.h"
 #import "GRMustache.h"
 #import "AppDelegate.h"
+#import "Loader.h"
 
 @implementation WebController
 
@@ -84,13 +85,15 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     
     NSLog(@"webView:shouldStartLoad:navType");
     NSString *prefix = [[AppDelegate loadConfigForObject] objectForKey:@"prefix"];
+    NSString *prefixWithColon = [prefix stringByAppendingString:@":"];
     NSString *requestString = [[request URL] absoluteString];
     NSLog(@"Loading %@", requestString);
     // Intercept custom location change, URL begins with "js-call:"
     if ([requestString hasPrefix:prefix]) {
         
-        requestString = [requestString stringByReplacingOccurrencesOfString:prefix withString:[@"://" stringByAppendingString:prefix]];
+        requestString = [requestString stringByReplacingOccurrencesOfString:prefixWithColon withString:[prefix stringByAppendingString:@"://"]];
         NSURL *fixedURL = [NSURL URLWithString:requestString];
+        NSLog(@"%@", fixedURL);
         
         // Extract the selector name from the URL
         NSString *function = [NSString stringWithFormat:@"%@:", [fixedURL host]];
@@ -99,6 +102,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         NSDictionary *queryParameters = [fixedURL queryDictionary];
         
         SEL method = NSSelectorFromString(function);
+        NSLog(@"%@", function);
         if (![self respondsToSelector:method]) return NO;
         
         [self performSelector:method withObject:queryParameters];
@@ -110,6 +114,11 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     // Accept this location change
     return YES;
     
+}
+
+-(void)test:(NSDictionary *)params {
+    Loader *loader = [[Loader alloc] initWithRoute:[self.baseURL stringByAppendingString:@"/user/1/friends"]];    
+    NSLog(@"%@", [loader loadJSON]);
 }
 
 @end

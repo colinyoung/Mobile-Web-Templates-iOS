@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://mobile-web-template.herokuapp.com/</string>
+	<string>http://mobile-web-template.herokuapp.com</string>
 	<key>prefix</key>
 	<string>mwt</string>
 </dict>
