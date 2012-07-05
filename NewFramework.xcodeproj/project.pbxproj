@@ -36,7 +36,7 @@
 		3B6CABF415903E4500CEF513 /* jgestures.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABEB15903D0C00CEF513 /* jgestures.min.js */; };
 		3B6CABF515903E4500CEF513 /* boot.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE115903C1800CEF513 /* boot.js */; };
 		3B6CABF615903E4500CEF513 /* jquery-1.7.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */; };
-		3B6CABF715903E4500CEF513 /* lib.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE415903C1800CEF513 /* lib.js */; };
+		3B6CABF715903E4500CEF513 /* mobile_framework.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE415903C1800CEF513 /* mobile_framework.js */; };
 		3B6CABF815903E4500CEF513 /* underscore-min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE515903C1800CEF513 /* underscore-min.js */; };
 		3B6CABFD15903E8100CEF513 /* framework.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABFC15903E8100CEF513 /* framework.css */; };
 		3B6CABFF15903F3A00CEF513 /* bootstrap-responsive.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */; };
@@ -107,7 +107,7 @@
 		3B6CABDE15903A3800CEF513 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		3B6CABE115903C1800CEF513 /* boot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = boot.js; sourceTree = "<group>"; };
 		3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
-		3B6CABE415903C1800CEF513 /* lib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lib.js; sourceTree = "<group>"; };
+		3B6CABE415903C1800CEF513 /* mobile_framework.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mobile_framework.js; sourceTree = "<group>"; };
 		3B6CABE515903C1800CEF513 /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "underscore-min.js"; sourceTree = "<group>"; };
 		3B6CABEB15903D0C00CEF513 /* jgestures.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jgestures.min.js; sourceTree = "<group>"; };
 		3B6CABFC15903E8100CEF513 /* framework.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = framework.css; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 				3B6CABEB15903D0C00CEF513 /* jgestures.min.js */,
 				3B6CABE115903C1800CEF513 /* boot.js */,
 				3B6CABE215903C1800CEF513 /* jquery-1.7.2.min.js */,
-				3B6CABE415903C1800CEF513 /* lib.js */,
+				3B6CABE415903C1800CEF513 /* mobile_framework.js */,
 				3B6CABE515903C1800CEF513 /* underscore-min.js */,
 			);
 			path = Javascripts;
@@ -412,7 +412,7 @@
 				3B6CABF415903E4500CEF513 /* jgestures.min.js in Resources */,
 				3B6CABF515903E4500CEF513 /* boot.js in Resources */,
 				3B6CABF615903E4500CEF513 /* jquery-1.7.2.min.js in Resources */,
-				3B6CABF715903E4500CEF513 /* lib.js in Resources */,
+				3B6CABF715903E4500CEF513 /* mobile_framework.js in Resources */,
 				3B6CABF815903E4500CEF513 /* underscore-min.js in Resources */,
 				3B2BE319158678B200422193 /* InfoPlist.strings in Resources */,
 				3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */,
