@@ -1,3 +1,6 @@
 [submodule "Supporting Files/NetworkUtility"]
 	path = Supporting Files/NetworkUtility
 	url = git@github.com:vokalinteractive/NetworkUtility-iOS.git
+[submodule "Supporting Files/JSONKit"]
+	path = Supporting Files/JSONKit
+	url = https://github.com/johnezang/JSONKit/
