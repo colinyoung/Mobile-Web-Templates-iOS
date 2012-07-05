@@ -16,4 +16,7 @@
     #import "Types.h"
     #import "Functions.h"
     #import "Categories.h"
+
+    #import "NetworkUtility.h"
+    #import "RemoteNetworkUtility.h"
 #endif

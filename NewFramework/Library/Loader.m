@@ -11,4 +11,8 @@
     return self;
 }
 
+-(void)load {
+    [[NetworkUtility getInstance] setDelegate:[[RemoteNetworkUtility alloc] initWithAcceptsHeader:RemoteNetworkUtilityAcceptsJSON]];
+}
+
 @end
