@@ -2,9 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>baseURL</key>
+	<key>baseURL_prod</key>
 	<string>http://mobile-web-template.herokuapp.com</string>
 	<key>prefix</key>
 	<string>mwt</string>
+	<key>baseURL</key>
+	<string>http://localhost:5000</string>
 </dict>
 </plist>
