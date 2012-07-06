@@ -1,13 +1,13 @@
 #import "WebController.h"
 #import "GRMustache.h"
 #import "AppDelegate.h"
-#import "Loader.h"
 
 @implementation WebController
 
 @synthesize webView = _webView;
 @synthesize route = _route;
 @synthesize baseURL = _baseURL;
+@synthesize loader = _loader;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -15,6 +15,7 @@
     if (self) {
         // Custom initialization
         self.title = @"Loading...";
+        status = WebControllerStatusEmpty;
     }
     return self;
 }
@@ -30,6 +31,8 @@
         self.title = @"Loading...";
         self.baseURL = baseURL;
         self.route = route;
+        self.loader = [[Loader alloc] initWithRoute:[baseURL stringByAppendingString:route]];
+        status = WebControllerStatusEmpty;
     }
     return self;
 }
@@ -63,6 +66,10 @@
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
     [self.webView loadHTMLString:bootString_debug() baseURL:baseURL];
+}
+
+- (void)documentReady:(NSDictionary *)params {
+    [self load:nil]; // @todo load with params that were set to load this view
 }
 
 - (void)viewDidUnload
@@ -116,12 +123,25 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     
 }
 
--(void)loadHTML:(NSDictionary *)params {
-    Loader *loader = [[Loader alloc] initWithRoute:[self.baseURL stringByAppendingString:@"/user/1/friends"]];    
-    NSString *html = [loader loadHTML];
+-(void)load:(NSDictionary *)params {
+    [self loadData:params];
+    [self loadHTML:params];
     
-    if (!html) return;
-    [self.webView inject:html];
+    self.title = @"";
+}
+
+-(void)loadData:(NSDictionary *)params {
+    id JSON = [[self.loader loadJSON] objectForKey:kWebController_JSONDataKey];
+    [self.webView updateData:JSON];
+    
+    status = WebControllerStatusUpdated;
+}
+
+-(void)loadHTML:(NSDictionary *)params {
+    NSString *html = [self.loader loadHTML];
+    [self.webView replaceHTMLElementsWithString:html];
+    
+    status = WebControllerStatusLoaded;
 }
 
 @end
