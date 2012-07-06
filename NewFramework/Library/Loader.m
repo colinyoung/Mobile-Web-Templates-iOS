@@ -19,11 +19,25 @@
                                             withParameters:nil
                                               authenticate:NO
                                                      error:error];
+    if (error || [response data] == nil) {
+        [self showError:error];
+        return nil;
+    }
     return [response jsonObject];
 }
 
 -(NSString *)loadHTML {
-    return [[self loadJSON] objectForKey:@"html"];
+    id JSON = [self loadJSON];
+    if (!JSON || ![JSON respondsToSelector:@selector(objectForKey:)]) {
+        return nil;
+    }
+    
+    return [JSON objectForKey:@"html"];
+}
+
+-(void)showError:(NSError *)error {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sorry, there was an error loading the data." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+    [av show];
 }
 
 @end

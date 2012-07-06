@@ -120,6 +120,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     Loader *loader = [[Loader alloc] initWithRoute:[self.baseURL stringByAppendingString:@"/user/1/friends"]];    
     NSString *html = [loader loadHTML];
     
+    if (!html) return;
     [self.webView inject:html];
 }
 

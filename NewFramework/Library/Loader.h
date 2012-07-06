@@ -10,4 +10,6 @@
 -(id)loadJSON;
 -(NSString *)loadHTML;
 
+-(void)showError:(NSError *)error;
+
 @end
