@@ -124,8 +124,8 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 }
 
 -(void)load:(NSDictionary *)params {
-    [self loadData:params];
     [self loadHTML:params];
+    [self loadData:params];
     
     self.title = @"";
 }

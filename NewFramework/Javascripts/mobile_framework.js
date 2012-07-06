@@ -41,6 +41,25 @@ MobileFramework.prototype = {
   }
 };
 
+/* Data updater for elements */
+
+// Repeats relevant number of times
+$.fn.populateWithData = function(array) {
+  var localObject = $(this[0]).clone();
+  var parent = $(this).parent();
+  $(this).empty();
+  var html = localObject.html();
+  $(array).each(function(i,data) {
+    var s = Mustache.render(html, data);
+    parent.append(s);
+  });
+}
+
+// Just updates this one element
+$.fn.updateWithData = function(data) {
+  // @todo
+}
+
 /* View: Handles generation of cross-platform view elements. */
 var View = function() {};
 

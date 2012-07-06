@@ -5,6 +5,7 @@
 
 -(NSString *)call:(SEL)method;
 -(NSString *)apply:(SEL)method arguments:(NSArray*)arguments;
+-(NSString *)applyJQ:(SEL)method arguments:(NSArray *)arguments;
 -(NSString *)arrayAsString:(NSArray *)array;
 
 @end
@@ -17,6 +18,14 @@
 
 -(NSString *)apply:(SEL)method arguments:(NSArray *)arguments {
     return [self stringByAppendingString:[NSStringFromSelector(method) stringByAppendingFormat:@".apply($f, %@)",
+                                          [self arrayAsString:arguments]]];
+}
+-(NSString *)applyJQ:(SEL)method arguments:(NSArray *)arguments {
+    NSString *jQuerySelection = [self copy];
+    NSMutableString *str = [self mutableCopy];
+    [str appendString:@"."];
+    return [str stringByAppendingString:[NSStringFromSelector(method) stringByAppendingFormat:@".apply(%@, %@)",
+                                          jQuerySelection,
                                           [self arrayAsString:arguments]]];
 }
 
@@ -99,11 +108,24 @@
 - (BOOL)replaceHTMLElementsWithString:(NSString *)HTML {
     [self perform:[[self javascriptObject:@"$f"] apply:@selector(extractTemplatingElements) arguments:[NSArray arrayWithObject:HTML]]];
     
-    return YES; // @todo    
+    return YES;
 }
 
 - (BOOL)updateData:(id)jsonData {
-    return NO; // @todo
+    for (NSString *selector in jsonData) { // Top level is all selectors
+        id object = [jsonData objectForKey:selector];
+        
+        if ([object isKindOfClass:[NSArray class]]) {
+            // @todo make this work recursively
+            // Update and repeat elements matching selector
+            NSString *class = [@"." stringByAppendingString:selector]; // currently, selectors aren't REAL selectors, just class names
+            [self perform: \
+                      [[self select:class]
+                                        applyJQ:@selector(populateWithData)
+                                    arguments:[NSArray arrayWithObject:object]]];
+        }
+    }
+    return YES;
 }
 
 - (NSString *)select:(NSString *)selector {
