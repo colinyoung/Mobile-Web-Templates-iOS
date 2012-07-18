@@ -20,6 +20,7 @@
     return [self stringByAppendingString:[NSStringFromSelector(method) stringByAppendingFormat:@".apply($f, %@)",
                                           [self arrayAsString:arguments]]];
 }
+// @todo this is going to query twice, being slower...
 -(NSString *)applyJQ:(SEL)method arguments:(NSArray *)arguments {
     NSString *jQuerySelection = [self copy];
     NSMutableString *str = [self mutableCopy];
@@ -142,7 +143,7 @@
         if ([object isKindOfClass:[NSArray class]]) {
             // @todo make this work recursively
             // Update and repeat elements matching selector
-            NSString *class = [@"." stringByAppendingString:selector]; // currently, selectors aren't REAL selectors, just class names
+            NSString *class = [@".mwt-" stringByAppendingString:[selector singularize]]; // currently, selectors aren't REAL selectors, just class names
             [self perform: \
                       [[self select:class]
                                         applyJQ:@selector(populateWithData)
