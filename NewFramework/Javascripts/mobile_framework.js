@@ -32,9 +32,16 @@ MobileFramework.prototype = {
     if (rootElement.hasClass(this.prefix)) {
       elements.push(rootElement);
     }
-    elements.concat(rootElement.find('.' + this.prefix));
+    elements = elements.concat(rootElement.find('.' + this.prefix));
+    
+    // Append root element
+    if ($('*[data-element="root"]').length == 0) {
+      $('body').append(rootElement);
+      rootElement.attr('data-element', 'root');
+    }
     
     $(elements).each(function(i,v) {
+            
       var id = $(v).attr('id');
       var klass = _this.prefix + '-' + id;
       var repeat = $(v);
@@ -46,7 +53,8 @@ MobileFramework.prototype = {
       // Change previous ID to a namespaced class
       repeat.addClass(klass);
       
-      $('body').append(repeat);
+      // Replace parent      
+      $(v).parent().html(repeat);
     });
   }
 };
@@ -56,7 +64,7 @@ MobileFramework.prototype = {
 // Repeats relevant number of times
 $.fn.populateWithData = function(array) {
   var localObject = $(this[0]).clone();
-  var parent = $(this).parent();
+  var parent = $(this).parent();  
   $(this).empty();
   var html = localObject.html();
   $(array).each(function(i,data) {
