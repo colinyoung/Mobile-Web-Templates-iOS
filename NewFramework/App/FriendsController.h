@@ -1,0 +1,3 @@
+@interface FriendsController : WebController
+
+@end

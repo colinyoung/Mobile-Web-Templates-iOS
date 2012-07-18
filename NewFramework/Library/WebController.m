@@ -2,6 +2,8 @@
 #import "GRMustache.h"
 #import "AppDelegate.h"
 
+#define LOADING_TEXT @"Loading..."
+
 @implementation WebController
 
 @synthesize webView = _webView;
@@ -14,7 +16,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"Loading...";
+        self.title = [NSString stringWithString:LOADING_TEXT];
         status = WebControllerStatusEmpty;
     }
     return self;
@@ -28,7 +30,7 @@
 - (id)initWithBaseURL:(NSString *)baseURL route:(NSString *)route {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        self.title = @"Loading...";
+        self.title = [NSString stringWithString:LOADING_TEXT];
         self.baseURL = baseURL;
         self.route = route;
         self.loader = [[Loader alloc] initWithRoute:[baseURL stringByAppendingString:route]];
@@ -127,7 +129,9 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     [self loadUI:params];
     [self loadData:params];
     
-    self.title = @"";
+    if ([self.title isEqualToString:LOADING_TEXT]) {
+        self.title = @"";
+    }
 }
 
 -(void)loadData:(NSDictionary *)params {

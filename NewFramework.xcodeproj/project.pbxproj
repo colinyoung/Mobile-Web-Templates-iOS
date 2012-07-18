@@ -50,6 +50,7 @@
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
 		3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8415B677A90072C1DD /* WebInterface.m */; };
 		3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */; };
+		3BDDDC9715B6824A0072C1DD /* FriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC9615B6824A0072C1DD /* FriendsController.m */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 		A1B227BC05AD4F64B9F661CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,8 @@
 		3BDDDC8715B679470072C1DD /* UIWebView+Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Interface.h"; sourceTree = "<group>"; };
 		3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Interface.m"; sourceTree = "<group>"; };
 		3BDDDC8A15B67C8F0072C1DD /* Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes.h; sourceTree = "<group>"; };
+		3BDDDC9515B6824A0072C1DD /* FriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsController.h; sourceTree = "<group>"; };
+		3BDDDC9615B6824A0072C1DD /* FriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,7 @@
 		3B2BE314158678B200422193 /* NewFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3BDDDC9415B682390072C1DD /* App */,
 				3B6CABFB15903E7600CEF513 /* Styles */,
 				3B6CAC12159050B600CEF513 /* Images */,
 				3B6CABE015903C1800CEF513 /* Javascripts */,
@@ -345,6 +349,15 @@
 				3BDDDC8A15B67C8F0072C1DD /* Classes.h */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		3BDDDC9415B682390072C1DD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3BDDDC9515B6824A0072C1DD /* FriendsController.h */,
+				3BDDDC9615B6824A0072C1DD /* FriendsController.m */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +513,7 @@
 				3B2713B815A5DE8A007EF05E /* RemoteNetworkUtility.m in Sources */,
 				3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */,
 				3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */,
+				3BDDDC9715B6824A0072C1DD /* FriendsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

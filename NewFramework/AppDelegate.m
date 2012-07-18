@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FriendsController.h"
 
 @implementation AppDelegate
 
@@ -40,7 +41,7 @@ static NSOperationQueue *sharedOperationQueue = NULL;
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.rootVC = [[WebController alloc] initWithRoute:@"/user/1/friends"];
+    self.rootVC = [[FriendsController alloc] initWithRoute:@"/user/1/friends"];
     
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.rootVC];
     [self.window addSubview:navVC.view];
