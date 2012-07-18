@@ -51,6 +51,12 @@
 		3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8415B677A90072C1DD /* WebInterface.m */; };
 		3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */; };
 		3BDDDC9715B6824A0072C1DD /* FriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC9615B6824A0072C1DD /* FriendsController.m */; };
+		3BDDDCB215B687AB0072C1DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BDDDC9D15B687AB0072C1DD /* InfoPlist.strings */; };
+		3BDDDCB315B687AB0072C1DD /* InflectionsTestBundle-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BDDDCA315B687AB0072C1DD /* InflectionsTestBundle-Info.plist */; };
+		3BDDDCB515B687AB0072C1DD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BDDDCA615B687AB0072C1DD /* Info.plist */; };
+		3BDDDCB615B687AB0072C1DD /* MIT-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3BDDDCA715B687AB0072C1DD /* MIT-LICENSE */; };
+		3BDDDCB715B687AB0072C1DD /* NSString+Inflections.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDCA915B687AB0072C1DD /* NSString+Inflections.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BDDDCB815B687AB0072C1DD /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3BDDDCAA15B687AB0072C1DD /* README.markdown */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 		A1B227BC05AD4F64B9F661CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3B2BE307158678B100422193;
 			remoteInfo = NewFramework;
+		};
+		3BDDDCBD15B687AC0072C1DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDDDC9F15B687AB0072C1DD /* Inflections.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Inflections;
+		};
+		3BDDDCBF15B687AC0072C1DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDDDC9F15B687AB0072C1DD /* Inflections.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66BF3CF112657CB600B78BF0;
+			remoteInfo = InflectionsTestBundle;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,6 +154,17 @@
 		3BDDDC8A15B67C8F0072C1DD /* Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes.h; sourceTree = "<group>"; };
 		3BDDDC9515B6824A0072C1DD /* FriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsController.h; sourceTree = "<group>"; };
 		3BDDDC9615B6824A0072C1DD /* FriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsController.m; sourceTree = "<group>"; };
+		3BDDDC9E15B687AB0072C1DD /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BDDDC9F15B687AB0072C1DD /* Inflections.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Inflections.xcodeproj; sourceTree = "<group>"; };
+		3BDDDCA215B687AB0072C1DD /* Inflections_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inflections_Prefix.pch; sourceTree = "<group>"; };
+		3BDDDCA315B687AB0072C1DD /* InflectionsTestBundle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "InflectionsTestBundle-Info.plist"; sourceTree = "<group>"; };
+		3BDDDCA415B687AB0072C1DD /* InflectionsTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InflectionsTestCase.h; sourceTree = "<group>"; };
+		3BDDDCA515B687AB0072C1DD /* InflectionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InflectionsTestCase.m; sourceTree = "<group>"; };
+		3BDDDCA615B687AB0072C1DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDDDCA715B687AB0072C1DD /* MIT-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MIT-LICENSE"; sourceTree = "<group>"; };
+		3BDDDCA815B687AB0072C1DD /* NSString+Inflections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Inflections.h"; sourceTree = "<group>"; };
+		3BDDDCA915B687AB0072C1DD /* NSString+Inflections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Inflections.m"; sourceTree = "<group>"; };
+		3BDDDCAA15B687AB0072C1DD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +275,7 @@
 		3B2BE315158678B200422193 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BDDDC9B15B687AB0072C1DD /* Inflections */,
 				3B2713A715A5DE8A007EF05E /* NetworkUtility */,
 				3B2BE316158678B200422193 /* NewFramework-Info.plist */,
 				3B2BE317158678B200422193 /* InfoPlist.strings */,
@@ -360,6 +392,34 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		3BDDDC9B15B687AB0072C1DD /* Inflections */ = {
+			isa = PBXGroup;
+			children = (
+				3BDDDC9D15B687AB0072C1DD /* InfoPlist.strings */,
+				3BDDDC9F15B687AB0072C1DD /* Inflections.xcodeproj */,
+				3BDDDCA215B687AB0072C1DD /* Inflections_Prefix.pch */,
+				3BDDDCA315B687AB0072C1DD /* InflectionsTestBundle-Info.plist */,
+				3BDDDCA415B687AB0072C1DD /* InflectionsTestCase.h */,
+				3BDDDCA515B687AB0072C1DD /* InflectionsTestCase.m */,
+				3BDDDCA615B687AB0072C1DD /* Info.plist */,
+				3BDDDCA715B687AB0072C1DD /* MIT-LICENSE */,
+				3BDDDCA815B687AB0072C1DD /* NSString+Inflections.h */,
+				3BDDDCA915B687AB0072C1DD /* NSString+Inflections.m */,
+				3BDDDCAA15B687AB0072C1DD /* README.markdown */,
+			);
+			name = Inflections;
+			path = "Supporting Files/Inflections";
+			sourceTree = SOURCE_ROOT;
+		};
+		3BDDDCA015B687AB0072C1DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BDDDCBE15B687AC0072C1DD /* Inflections.framework */,
+				3BDDDCC015B687AC0072C1DD /* InflectionsTestBundle.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,10 +476,17 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 3B2BE2FD158678B100422193;
 			productRefGroup = 3B2BE309158678B200422193 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3BDDDCA015B687AB0072C1DD /* Products */;
+					ProjectRef = 3BDDDC9F15B687AB0072C1DD /* Inflections.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B2BE307158678B100422193 /* NewFramework */,
@@ -427,6 +494,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3BDDDCBE15B687AC0072C1DD /* Inflections.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Inflections.framework;
+			remoteRef = 3BDDDCBD15B687AC0072C1DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BDDDCC015B687AC0072C1DD /* InflectionsTestBundle.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InflectionsTestBundle.octest;
+			remoteRef = 3BDDDCBF15B687AC0072C1DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B2BE306158678B100422193 /* Resources */ = {
@@ -448,6 +532,11 @@
 				3B6CAC04159041EF00CEF513 /* bootstrap.min.css in Resources */,
 				3B6CAC14159050B700CEF513 /* disclosure-indicator.png in Resources */,
 				3B2713B315A5DE8A007EF05E /* .gitignore in Resources */,
+				3BDDDCB215B687AB0072C1DD /* InfoPlist.strings in Resources */,
+				3BDDDCB315B687AB0072C1DD /* InflectionsTestBundle-Info.plist in Resources */,
+				3BDDDCB515B687AB0072C1DD /* Info.plist in Resources */,
+				3BDDDCB615B687AB0072C1DD /* MIT-LICENSE in Resources */,
+				3BDDDCB815B687AB0072C1DD /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +603,7 @@
 				3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */,
 				3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */,
 				3BDDDC9715B6824A0072C1DD /* FriendsController.m in Sources */,
+				3BDDDCB715B687AB0072C1DD /* NSString+Inflections.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +638,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				3B2BE334158678B200422193 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3BDDDC9D15B687AB0072C1DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BDDDC9E15B687AB0072C1DD /* English */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

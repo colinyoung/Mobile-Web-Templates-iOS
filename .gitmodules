@@ -1,3 +1,6 @@
 [submodule "Supporting Files/NetworkUtility"]
 	path = Supporting Files/NetworkUtility
 	url = git@github.com:colinyoung/NetworkUtility-iOS.git
+[submodule "Supporting Files/Inflections"]
+	path = Supporting Files/Inflections
+	url = https://github.com/adamelliot/Inflections

@@ -2,6 +2,8 @@ PODS:
   - GRMustache (3.0.1):
     - JRSwizzle (~> 1.0)
   - JRSwizzle (1.0)
+  - RegexKitLite (4.0)
 
 DEPENDENCIES:
   - GRMustache
+  - RegexKitLite
