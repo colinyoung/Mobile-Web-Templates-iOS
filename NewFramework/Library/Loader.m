@@ -26,7 +26,7 @@
     return [response jsonObject];
 }
 
--(NSString *)loadHTML {
+-(NSString *)loadUI {
     id JSON = [self loadJSON];
     if (!JSON || ![JSON respondsToSelector:@selector(objectForKey:)]) {
         return nil;

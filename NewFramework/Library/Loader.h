@@ -8,7 +8,7 @@
 
 -(id)initWithRoute:(NSString*)route;
 -(id)loadJSON;
--(NSString *)loadHTML;
+-(NSString *)loadUI;
 
 -(void)showError:(NSError *)error;
 

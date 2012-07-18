@@ -31,6 +31,6 @@ typedef enum {
 -(void)load:(NSDictionary *)params; /* Loads whatever is needed to render a view (recommended). */
 
 -(void)loadData:(NSDictionary *)params; /* Loads just the data - usually. If there's no HTML, it'll call -(void)load instead. */
--(void)loadHTML:(NSDictionary *)params; /* Loads just the HTML. */
+-(void)loadUI:(NSDictionary *)params; /* Loads just the HTML. */
 
 @end

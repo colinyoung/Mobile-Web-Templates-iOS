@@ -124,7 +124,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 }
 
 -(void)load:(NSDictionary *)params {
-    [self loadHTML:params];
+    [self loadUI:params];
     [self loadData:params];
     
     self.title = @"";
@@ -137,8 +137,8 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     status = WebControllerStatusUpdated;
 }
 
--(void)loadHTML:(NSDictionary *)params {
-    NSString *html = [self.loader loadHTML];
+-(void)loadUI:(NSDictionary *)params {
+    NSString *html = [self.loader loadUI];
     [self.webView replaceHTMLElementsWithString:html];
     
     status = WebControllerStatusLoaded;
