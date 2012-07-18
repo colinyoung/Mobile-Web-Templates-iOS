@@ -41,3 +41,8 @@ NSString * bootString() {
     "</body>"
     "</html>";
 }
+
+BOOL isEmptyString(NSString *str) {
+    return (str == nil || !str || str.length == 0 || [[str stringByTrimmingCharactersInSet:
+                                                        [NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]);
+}
