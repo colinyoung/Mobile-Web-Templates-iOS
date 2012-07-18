@@ -60,6 +60,11 @@ $.fn.updateWithData = function(data) {
   // @todo
 }
 
+// update innerText
+$.fn.updateText = function(text) {
+  $(this).text(text);
+}
+
 /* View: Handles generation of cross-platform view elements. */
 var View = function() {};
 
