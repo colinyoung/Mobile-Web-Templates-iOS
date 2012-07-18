@@ -26,13 +26,13 @@
     return [response jsonObject];
 }
 
--(NSString *)loadUI {
+-(WebInterface *)loadUI {
     id JSON = [self loadJSON];
     if (!JSON || ![JSON respondsToSelector:@selector(objectForKey:)]) {
         return nil;
     }
     
-    return [JSON objectForKey:@"html"];
+    return [WebInterface interfaceWithObject:JSON];
 }
 
 -(void)showError:(NSError *)error {

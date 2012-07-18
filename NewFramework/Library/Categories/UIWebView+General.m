@@ -106,8 +106,32 @@
 }
 
 - (BOOL)replaceHTMLElementsWithString:(NSString *)HTML {
+    if (HTML == nil) return NO;
+    
     [self perform:[[self javascriptObject:@"$f"] apply:@selector(extractTemplatingElements) arguments:[NSArray arrayWithObject:HTML]]];
     
+    return YES;
+}
+
+- (BOOL)replacePageCSSWithString:(NSString *)css {
+    if (css == nil) return NO;
+    
+    if (isEmptyString([self perform:[self select:@"style.page"]])) {
+        [self inject:@"<style class=\"page\"></style>" intoElement:@"head"];
+    }
+    
+    [self perform:[[self select:@"style.page"] applyJQ:@selector(updateText)
+                                           arguments:[NSArray arrayWithObject:css]]];
+    return YES;
+}
+
+- (BOOL)replacePageJSWithString:(NSString *)js {
+    if (js == nil) return NO;
+    
+    NSString *tag = [NSString stringWithFormat: @"<script type=\"text/javascript\" encoding=\"utf-8\">"
+                                                "%@"
+                                                "</script>", js];
+    [self inject:tag intoElement:@"head"];
     return YES;
 }
 
@@ -133,9 +157,9 @@
 }
                    
 #pragma mark - JS Bridge
-- (void)perform:(NSString *)string {
+- (NSString *)perform:(NSString *)string {
     NSLog(@"js > %@", string);
-    [self stringByEvaluatingJavaScriptFromString:string];
+    return [self stringByEvaluatingJavaScriptFromString:string];
 }
 
 - (NSString *) javascriptObject:(NSString *)objectName {

@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+@class WebInterface;
+
 @interface Loader : NSObject {
     NSString *_route;
 }
@@ -8,7 +10,7 @@
 
 -(id)initWithRoute:(NSString*)route;
 -(id)loadJSON;
--(NSString *)loadUI;
+-(WebInterface *)loadUI;
 
 -(void)showError:(NSError *)error;
 

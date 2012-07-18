@@ -138,8 +138,8 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 }
 
 -(void)loadUI:(NSDictionary *)params {
-    NSString *html = [self.loader loadUI];
-    [self.webView replaceHTMLElementsWithString:html];
+    WebInterface *interface = [self.loader loadUI];
+    [self.webView applyInterface:interface];
     
     status = WebControllerStatusLoaded;
 }

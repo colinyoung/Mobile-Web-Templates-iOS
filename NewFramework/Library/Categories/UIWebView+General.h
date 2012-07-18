@@ -9,7 +9,7 @@
 /* For chaining of JS */
 - (NSString *) select:(NSString *)selector;
 - (NSString *) javascriptObject:(NSString *)objectName;
-- (void) perform:(NSString *)string;
+- (NSString *) perform:(NSString *)string;
 
 - (NSString *) HTML;
 
@@ -20,6 +20,12 @@
 
 /* Replaces HTML elements with elements with selector keys. Keys should be jQuery/CSS selectors. */
 - (BOOL)replaceHTMLElements:(NSDictionary*)dictionary;
+
+/* Replaces Script elements for this local page; does NOT remove global scripts like jQuery. */
+- (BOOL)replacePageJSWithString:(NSString*)js;
+
+/* Replaces CSS elements for this local page; does NOT remove global css included thru <link>s. */
+- (BOOL)replacePageCSSWithString:(NSString*)css;
 
 /* Updates HTML elements matching selectors with the data array value, ending with correct quantity of that class repeated. */
 - (BOOL)updateData:(id)jsonData;

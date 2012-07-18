@@ -48,6 +48,8 @@
 		3B6CAC1115904E9D00CEF513 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CAC1015904E9C00CEF513 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B6CAC14159050B700CEF513 /* disclosure-indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC13159050B700CEF513 /* disclosure-indicator.png */; };
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
+		3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8415B677A90072C1DD /* WebInterface.m */; };
+		3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */; };
 		8909FF4C4DAD4A2794921768 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 		A1B227BC05AD4F64B9F661CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB6604567D4D7DA8617EE8 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -124,6 +126,11 @@
 		3B6CAC13159050B700CEF513 /* disclosure-indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-indicator.png"; sourceTree = "<group>"; };
 		3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Config-AppDelegate.plist"; sourceTree = "<group>"; };
 		3BB19204159036FC007A5E2C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		3BDDDC8315B677A90072C1DD /* WebInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebInterface.h; sourceTree = "<group>"; };
+		3BDDDC8415B677A90072C1DD /* WebInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebInterface.m; sourceTree = "<group>"; };
+		3BDDDC8715B679470072C1DD /* UIWebView+Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Interface.h"; sourceTree = "<group>"; };
+		3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Interface.m"; sourceTree = "<group>"; };
+		3BDDDC8A15B67C8F0072C1DD /* Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +280,10 @@
 				3B6CAC0A15904B3B00CEF513 /* UIWebView+General.m */,
 				3B6CAC0C15904E3000CEF513 /* NSString+HTML.h */,
 				3B6CAC0D15904E3000CEF513 /* NSString+HTML.m */,
-				3B6CAC0F15904E9C00CEF513 /* GTMNSString+HTML.h */,
 				3B6CAC1015904E9C00CEF513 /* GTMNSString+HTML.m */,
+				3B6CAC0F15904E9C00CEF513 /* GTMNSString+HTML.h */,
+				3BDDDC8715B679470072C1DD /* UIWebView+Interface.h */,
+				3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -331,6 +340,9 @@
 				3B6CABDE15903A3800CEF513 /* Types.h */,
 				3B538B4715A2B86B00744CE3 /* Loader.h */,
 				3B538B4815A2B86B00744CE3 /* Loader.m */,
+				3BDDDC8315B677A90072C1DD /* WebInterface.h */,
+				3BDDDC8415B677A90072C1DD /* WebInterface.m */,
+				3BDDDC8A15B67C8F0072C1DD /* Classes.h */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -486,6 +498,8 @@
 				3B2713B515A5DE8A007EF05E /* SFHFKeychainUtils.m in Sources */,
 				3B2713B615A5DE8A007EF05E /* NetworkUtility.m in Sources */,
 				3B2713B815A5DE8A007EF05E /* RemoteNetworkUtility.m in Sources */,
+				3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */,
+				3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
 #import "Loader.h"
 
+@class WebInterface;
+
 #define kWebController_JSONDataKey @"resources"
 
 typedef enum {
