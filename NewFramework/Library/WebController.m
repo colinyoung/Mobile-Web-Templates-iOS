@@ -52,7 +52,7 @@
     
     // Create and display webview
     CGRect frame = self.view.frame;
-    frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    frame = CGRectMake(0, 0, frame.size.width, frame.size.height-self.navigationController.navigationBar.frame.size.height);
     self.webView = [[UIWebView alloc] initWithFrame:frame];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
