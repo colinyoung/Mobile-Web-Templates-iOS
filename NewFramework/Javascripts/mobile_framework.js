@@ -36,14 +36,15 @@ MobileFramework.prototype = {
     
     $(elements).each(function(i,v) {
       var id = $(v).attr('id');
-      if ($('#' + id).length > 0) return; // Already in the view
+      var klass = _this.prefix + '-' + id;
       var repeat = $(v);
+      if ($('.' + klass).length > 0) return; // Already in the view
       
       // Change ID to a serial one
       repeat.attr('id', id + '-' + i);
       
       // Change previous ID to a namespaced class
-      repeat.addClass(_this.prefix + '-' + id);
+      repeat.addClass(klass);
       
       $('body').append(repeat);
     });
