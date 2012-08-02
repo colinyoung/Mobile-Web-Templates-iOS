@@ -39,15 +39,15 @@
 		3B6CABF715903E4500CEF513 /* mobile_framework.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE415903C1800CEF513 /* mobile_framework.js */; };
 		3B6CABF815903E4500CEF513 /* underscore-min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABE515903C1800CEF513 /* underscore-min.js */; };
 		3B6CABFD15903E8100CEF513 /* framework.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABFC15903E8100CEF513 /* framework.css */; };
-		3B6CABFF15903F3A00CEF513 /* bootstrap-responsive.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */; };
 		3B6CAC0215903F8C00CEF513 /* theme-ios.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC0115903F8C00CEF513 /* theme-ios.css */; };
-		3B6CAC04159041EF00CEF513 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC03159041EF00CEF513 /* bootstrap.min.css */; };
 		3B6CAC081590495800CEF513 /* mustache.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC061590488F00CEF513 /* mustache.js */; };
 		3B6CAC0B15904B3B00CEF513 /* UIWebView+General.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CAC0A15904B3B00CEF513 /* UIWebView+General.m */; };
 		3B6CAC0E15904E3000CEF513 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CAC0D15904E3000CEF513 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B6CAC1115904E9D00CEF513 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CAC1015904E9C00CEF513 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B6CAC14159050B700CEF513 /* disclosure-indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CAC13159050B700CEF513 /* disclosure-indicator.png */; };
 		3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */; };
+		3BD886B915CB251C003CCA40 /* bootstrap-responsive.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3BD886B715CB251C003CCA40 /* bootstrap-responsive.min.css */; };
+		3BD886BA15CB251C003CCA40 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3BD886B815CB251C003CCA40 /* bootstrap.min.css */; };
 		3BDDDC8515B677A90072C1DD /* WebInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8415B677A90072C1DD /* WebInterface.m */; };
 		3BDDDC8915B679470072C1DD /* UIWebView+Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC8815B679470072C1DD /* UIWebView+Interface.m */; };
 		3BDDDC9715B6824A0072C1DD /* FriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDDC9615B6824A0072C1DD /* FriendsController.m */; };
@@ -134,9 +134,7 @@
 		3B6CABE515903C1800CEF513 /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "underscore-min.js"; sourceTree = "<group>"; };
 		3B6CABEB15903D0C00CEF513 /* jgestures.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jgestures.min.js; sourceTree = "<group>"; };
 		3B6CABFC15903E8100CEF513 /* framework.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = framework.css; sourceTree = "<group>"; };
-		3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "bootstrap-responsive.min.css"; path = "../../../../Downloads/bootstrap 3/css/bootstrap-responsive.min.css"; sourceTree = "<group>"; };
 		3B6CAC0115903F8C00CEF513 /* theme-ios.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "theme-ios.css"; sourceTree = "<group>"; };
-		3B6CAC03159041EF00CEF513 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.min.css; path = "../../../../Downloads/bootstrap 3/css/bootstrap.min.css"; sourceTree = "<group>"; };
 		3B6CAC061590488F00CEF513 /* mustache.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mustache.js; sourceTree = "<group>"; };
 		3B6CAC0915904B3B00CEF513 /* UIWebView+General.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+General.h"; sourceTree = "<group>"; };
 		3B6CAC0A15904B3B00CEF513 /* UIWebView+General.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+General.m"; sourceTree = "<group>"; };
@@ -147,6 +145,8 @@
 		3B6CAC13159050B700CEF513 /* disclosure-indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-indicator.png"; sourceTree = "<group>"; };
 		3BB191F715902DBF007A5E2C /* Config-AppDelegate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Config-AppDelegate.plist"; sourceTree = "<group>"; };
 		3BB19204159036FC007A5E2C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		3BD886B715CB251C003CCA40 /* bootstrap-responsive.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "bootstrap-responsive.min.css"; sourceTree = "<group>"; };
+		3BD886B815CB251C003CCA40 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.min.css; sourceTree = "<group>"; };
 		3BDDDC8315B677A90072C1DD /* WebInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebInterface.h; sourceTree = "<group>"; };
 		3BDDDC8415B677A90072C1DD /* WebInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebInterface.m; sourceTree = "<group>"; };
 		3BDDDC8715B679470072C1DD /* UIWebView+Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Interface.h"; sourceTree = "<group>"; };
@@ -340,9 +340,9 @@
 		3B6CABFB15903E7600CEF513 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				3BD886B715CB251C003CCA40 /* bootstrap-responsive.min.css */,
+				3BD886B815CB251C003CCA40 /* bootstrap.min.css */,
 				3B6CAC0015903F8600CEF513 /* Themes */,
-				3B6CABFE15903F3A00CEF513 /* bootstrap-responsive.min.css */,
-				3B6CAC03159041EF00CEF513 /* bootstrap.min.css */,
 				3B6CABFC15903E8100CEF513 /* framework.css */,
 			);
 			path = Styles;
@@ -527,9 +527,7 @@
 				3BB191F815902DBF007A5E2C /* Config-AppDelegate.plist in Resources */,
 				3B6CABDF15903A3800CEF513 /* Types.h in Resources */,
 				3B6CABFD15903E8100CEF513 /* framework.css in Resources */,
-				3B6CABFF15903F3A00CEF513 /* bootstrap-responsive.min.css in Resources */,
 				3B6CAC0215903F8C00CEF513 /* theme-ios.css in Resources */,
-				3B6CAC04159041EF00CEF513 /* bootstrap.min.css in Resources */,
 				3B6CAC14159050B700CEF513 /* disclosure-indicator.png in Resources */,
 				3B2713B315A5DE8A007EF05E /* .gitignore in Resources */,
 				3BDDDCB215B687AB0072C1DD /* InfoPlist.strings in Resources */,
@@ -537,6 +535,8 @@
 				3BDDDCB515B687AB0072C1DD /* Info.plist in Resources */,
 				3BDDDCB615B687AB0072C1DD /* MIT-LICENSE in Resources */,
 				3BDDDCB815B687AB0072C1DD /* README.markdown in Resources */,
+				3BD886B915CB251C003CCA40 /* bootstrap-responsive.min.css in Resources */,
+				3BD886BA15CB251C003CCA40 /* bootstrap.min.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
