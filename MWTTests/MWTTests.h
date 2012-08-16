@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface NewFrameworkTests : SenTestCase
+@interface MWTTests : SenTestCase
 
 @end

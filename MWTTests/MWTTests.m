@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Cloudbot. All rights reserved.
 //
 
-#import "NewFrameworkTests.h"
+#import "MWTTests.h"
 
-@implementation NewFrameworkTests
+@implementation MWTTests
 
 - (void)setUp
 {
