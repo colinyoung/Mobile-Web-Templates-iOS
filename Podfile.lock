@@ -2,8 +2,8 @@ PODS:
   - GRMustache (4.3.2):
     - JRSwizzle (~> 1.0)
   - JRSwizzle (1.0)
-  - RegexKitLite (4.0)
+  - JSONKit (1.5pre)
 
 DEPENDENCIES:
   - GRMustache
-  - RegexKitLite
+  - JSONKit

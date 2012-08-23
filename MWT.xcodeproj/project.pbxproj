@@ -15,8 +15,6 @@
 		3B0EB02215DC6EC2002181EF /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EB00315DC6EC2002181EF /* README.markdown */; };
 		3B0EB02315DC6EC2002181EF /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EB00515DC6EC2002181EF /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0EB02415DC6EC2002181EF /* RegKitLite-License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EB00615DC6EC2002181EF /* RegKitLite-License.rtf */; };
-		3B0EB02515DC6EC2002181EF /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EB00815DC6EC2002181EF /* CHANGELOG.md */; };
-		3B0EB02615DC6EC2002181EF /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EB00A15DC6EC2002181EF /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0EB02915DC6EC2002181EF /* HttpUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EB01015DC6EC2002181EF /* HttpUserCredentials.m */; };
 		3B0EB02A15DC6EC2002181EF /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EB01215DC6EC2002181EF /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0EB02B15DC6EC2002181EF /* NetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EB01415DC6EC2002181EF /* NetworkUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -108,10 +106,6 @@
 		3B0EB00415DC6EC2002181EF /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		3B0EB00515DC6EC2002181EF /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		3B0EB00615DC6EC2002181EF /* RegKitLite-License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "RegKitLite-License.rtf"; sourceTree = "<group>"; };
-		3B0EB00815DC6EC2002181EF /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		3B0EB00915DC6EC2002181EF /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		3B0EB00A15DC6EC2002181EF /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		3B0EB00B15DC6EC2002181EF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3B0EB00D15DC6EC2002181EF /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3B0EB00F15DC6EC2002181EF /* HttpUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUserCredentials.h; sourceTree = "<group>"; };
 		3B0EB01015DC6EC2002181EF /* HttpUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUserCredentials.m; sourceTree = "<group>"; };
@@ -217,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				3B0EAFF415DC6EC2002181EF /* Inflections */,
-				3B0EB00715DC6EC2002181EF /* JSONKit */,
 				3B0EB00C15DC6EC2002181EF /* NetworkUtility */,
 			);
 			path = "Supporting Files";
@@ -252,17 +245,6 @@
 				3B0EB03315DC6EC2002181EF /* InflectionsTestBundle.octest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3B0EB00715DC6EC2002181EF /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				3B0EB00815DC6EC2002181EF /* CHANGELOG.md */,
-				3B0EB00915DC6EC2002181EF /* JSONKit.h */,
-				3B0EB00A15DC6EC2002181EF /* JSONKit.m */,
-				3B0EB00B15DC6EC2002181EF /* README.md */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		3B0EB00C15DC6EC2002181EF /* NetworkUtility */ = {
@@ -557,7 +539,6 @@
 				3B0EB02015DC6EC2002181EF /* MIT-LICENSE in Resources */,
 				3B0EB02215DC6EC2002181EF /* README.markdown in Resources */,
 				3B0EB02415DC6EC2002181EF /* RegKitLite-License.rtf in Resources */,
-				3B0EB02515DC6EC2002181EF /* CHANGELOG.md in Resources */,
 				3BAE431715DC739B00E26674 /* Config-AppDelegate.plist in Resources */,
 				3BAE431815DC739B00E26674 /* InfoPlist.strings in Resources */,
 				3BAE431915DC739B00E26674 /* disclosure-indicator.png in Resources */,
@@ -623,7 +604,6 @@
 				3BD9AB6B15DC6C990081642A /* MWTTests.m in Sources */,
 				3B0EB02115DC6EC2002181EF /* NSString+Inflections.m in Sources */,
 				3B0EB02315DC6EC2002181EF /* RegexKitLite.m in Sources */,
-				3B0EB02615DC6EC2002181EF /* JSONKit.m in Sources */,
 				3B0EB02915DC6EC2002181EF /* HttpUserCredentials.m in Sources */,
 				3B0EB02A15DC6EC2002181EF /* SFHFKeychainUtils.m in Sources */,
 				3B0EB02B15DC6EC2002181EF /* NetworkUtility.m in Sources */,

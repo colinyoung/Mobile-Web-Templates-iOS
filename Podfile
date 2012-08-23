@@ -1,3 +1,4 @@
 platform :ios
 pod 'GRMustache'
-pod 'RegexKitLite'
+# pod 'RegexKitLite'
+pod 'JSONKit'
