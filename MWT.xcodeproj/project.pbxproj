@@ -125,6 +125,7 @@
 		3B2BE328158678B200422193 /* MWTTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWTTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2BE329158678B200422193 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B5D0F9815DC705F000F03FC /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		3BA79FCB15E5F29A00DDD789 /* MWT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWT.h; sourceTree = "<group>"; };
 		3BAE42E015DC739B00E26674 /* FriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsController.h; sourceTree = "<group>"; };
 		3BAE42E115DC739B00E26674 /* FriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsController.m; sourceTree = "<group>"; };
 		3BAE42E215DC739B00E26674 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -275,6 +276,7 @@
 		3B2BE2FD158678B100422193 = {
 			isa = PBXGroup;
 			children = (
+				3BA79FCB15E5F29A00DDD789 /* MWT.h */,
 				3BAE42DE15DC739B00E26674 /* MWT */,
 				3B5D0F9815DC705F000F03FC /* libicucore.dylib */,
 				3B0EAFF315DC6EC2002181EF /* Supporting Files */,
