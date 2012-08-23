@@ -1,3 +1,3 @@
 platform :ios
-dependency 'GRMustache'
-dependency 'RegexKitLite'
+pod 'GRMustache'
+pod 'RegexKitLite'
